@@ -43,11 +43,25 @@
 \renewcommand{\theenumiii}{\arabic{enumiii}}
 \renewcommand{\labelenumiii}{\theenumiii}
 
+% Pastabos ir pavyzdžiai.
+
+\theoremstyle{remark}
+\newtheorem*{note}{Pastaba}
+\newtheorem*{kmt}{VMT?}                  % Kam man tai?
+
+\theoremstyle{definition}
+\newtheorem*{exmp}{Pavyzdys}
+
 % Nurodymas sugeneruoti terminų žodynėlį.
 \makeglossaries
 
 \input{./translations.tex}              % LaTeX raktažodžių vertimai.
 \input{./glossary.tex}                  % Terminų žodynėlis.
 
+% Naujos komandos.
+
 % Dokumento versijos numeris.
 \newcommand{\docversion}{1.0}
+
+% Angliškas terminas.
+\newcommand{\eng}[1]{(angliškai \emph{#1})}

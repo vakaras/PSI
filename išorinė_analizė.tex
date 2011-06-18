@@ -1,1 +1,150 @@
-\section{Išorinė analizė}
+\chapter{Išorinė analizė}
+
+\section{Poreikių analizė}
+
+\label{tema:poreikiu_analize}
+
+(6 tema, 12 skaidrė)
+
+Užsakovo poreikių analizavimas:
+\begin{enumerate}
+  \item analitikas bendraudamas su užsakovu išsiaiškina, ko reikia jo
+    veiklai – užsakovo operacinius poreikius (\gls{operacinis_poreikis})
+    ir iš jų suformuluoja operacinius reikalavimus 
+    (\gls{operacinis_reikalavimas});
+  \item analitikas iš operacinių reikalavimų suformuluoja konkrečius
+    reikalavimus programų sistemai (\gls{reikalavimas_programu_sistemai}).
+\end{enumerate}
+
+Užsakovo poreikių analizės metu yra rašoma verslo poreikių specifikacija.
+Šios specifikacijos paskirtis yra aprašyti pačias bendriausias operacines
+būsimos sistemos savybes – kaip sistema bus naudojama versle bei kokią
+naudą iš to turės verslas. Ji dažniausiai yra rengiama prieš nusprendžiant 
+ar apskritai yra prasminga vykdyti tokį projektą.
+\begin{note}
+  Kadangi verslo poreikių specifikacija yra koncepcinio lygmens dokumentas,
+  tai jame neturi būti kalbama nei apie sistemos projektavimo, nei apie
+  jos įgyvendinimo būdus.
+\end{note}
+
+Specifikacijoje aprašoma:
+\begin{itemize}
+  \item sistemos paskirtis (verslo terminais);
+  \item verslo poreikiai (operaciniais reikalavimais);
+  \item planuojamą sistemos naudojimo scenarijų;
+  \item sistemos aplinką (TODO: Išsiaiškinti – 6 tema, 22 skaidrė);
+  \item pirminę sistemos įgyvendinamumo analizę.
+\end{itemize}
+
+\subsection{Verslo poreikių specifikavimas}
+
+Siekiant išsiaiškinti verslo poreikius pirmiausia yra nustatomi jo:
+\begin{itemize}
+  \item siekis – kokia organizacijos (užsakovo) paskirtis, ko ji siekia?
+  \item vizija – kuo organizacija (užsakovo) norėtų tapti ateityje?
+\end{itemize}
+
+% FIXME Kaip visa tai siejasi hierarchiniu požiūriu? Vidinė ir išorinė
+% analizės yra SSGG analizės dalys, ar tai, kas yra vykdoma po jos?
+
+\subsubsection{SSGG analizė}
+
+Siekiant kokybiškai suformuluoti viziją ir parengti kokybišką strategiją
+gali būti naudojama SSGG \eng{SWOT} analizė. Jos metu yra 
+nustatomi aplinkos veiksniai bei galimas jų poveikis verslui. Veiksniai, 
+verslo požiūriu, gali būti:
+\begin{itemize}
+  \item vidiniai
+    \begin{itemize}
+      \item verslo stipriosios pusės \eng{Strengths} – turimi resursai
+        ir galimybės, kuriomis galima pasinaudoti siekiant konkurencinių
+        pranašumų (pavyzdžiui, patentai, gera reputacija tarp klientų);
+      \item verslo silpnosios pusės \eng{Weaknesses} – stipriųjų pusių
+        nebuvimas (pavyzdžiui, bloga reputacija tarp klientų, aukšta
+        gamybos savikaina);
+    \end{itemize}
+  \item išoriniai
+    \begin{itemize}
+      \item galimybės \eng{Opportunities} – bet kurie išoriniai verslo
+        proceso veiksniai, potencialiai padedantys tam procesui
+        greičiau ar efektyviau siekti norimų verslo tikslų;
+      \item grėsmės \eng{Threats} – bet kurie išoriniai verslo proceso
+        veiksniai, kaip nors ribojantys to proceso galimybes ar 
+        sukuriantys kliūtis pasiekti norimus verslo tikslus.
+    \end{itemize}
+\end{itemize}
+
+% FIXME Išsiaiškinti (6 tema, 51 skaidrė).
+%Tikslai gali būti formuluojami keturiuose sektoriuose:
+%\begin{itemize}
+  %\item \emph{įeigos logistika} – tiekėjai, tiekimo problemos, 
+    %tiekimo grėsmės;
+  %\item \emph{išeigos logistika} – platintojai, perpardavinėtojai,
+    %užsakovai, klientai, platinimo bei pardavimo problemos ir grėsmės;
+  %\item \emph{teisinis reguliavimas} – teisiniai ir privatumo
+    %apsaugos klausimai, su jais siejamos problemos ir grėsmės;
+  %\item \emph{išorinis vertinimas (įvaizdis)} – vertintojai, įvaizdžio
+    %problemos ir grėsmės.
+%\end{itemize}
+
+\subsection{Išorinė analizė}
+
+Atlikus SSGG analizę turėtų būti atliekama išorinė verslo proceso
+analizė, kuria siekiama sukurti kriterijų (verslo sėkmės matų sistemą), 
+kuriuo galima vertinti verslo efektyvumą. Paskui kiekvienam matui
+yra priskiriama po kritinę reikšmę – jei reali reikšmė yra artima kritinei,
+tai laikoma grėsme, o jei viršija – problema.
+\begin{exmp}
+  Sėkmės matų pavyzdžiai:
+
+  \begin{tabularx}{\textwidth}{l|X|X}
+    Veiksnys & Apibrėžimas & Formulė \\
+    \hline
+    Pelningumas & Įplaukų ir kaštų santykis & 
+      $\frac{\text{pajamos}}{\text{išlaidos}}$ \\
+    Produktyvumas & Išeigos ir sunaudotų resursų santykis &
+      $\frac{\text{produktai}}{%
+      \text{darbo sanaudos} + \text{sunaudotos žaliavos}}$ \\
+    Efektyvumas & Tikslų įgyvendinimo laipsnis &
+      $\frac{\text{faktinė gamybos apimtis per laiko vienetą}}{%
+      \text{planuota gamybos apimtis per laiko vienetą}}$
+  \end{tabularx}
+
+  Matavimų pavyzdžiai:
+
+  \begin{tabularx}{\textwidth}{l|X|X|X}
+    Veiksnys & Analizės rezultatai & Vertinimo kriterijus & Diagnozė \\
+    \hline
+    Produktyvumas & $85 \%$ & $\geq 80 \%$ & Grėsmė \\
+    Efektyvumas & $75 \%$ & $\geq 80 \%$ & Problema \\
+  \end{tabularx}
+\end{exmp}
+
+\subsection{Vidinė analizė}
+
+Baigus išorinę analizę yra atliekama visi verslo sistemos analizė. Jos
+metu siekiama išsiaiškinti verslo stipriąsias ir silpnąsias puses,
+vidines išorinės analizės metu nustatytų problemų bei grėsmių priežastis.
+Taip pat kokiomis neišnaudotomis galimybėmis verslas yra pajėgus 
+pasinaudoti. Populiariausi vidinės analizės metodai:
+\begin{itemize}
+  \item išteklių auditas;
+  \item kaštų ir pelno analizė;
+  \item lyginamoji analizė \eng{benchmarking};
+  \item vertės grandinės analizė;
+  \item tiekimo grandinės analizė.
+\end{itemize}
+
+\subsection{Strategija}
+
+\Gls{strategija} – \glsentrydesc{strategija}. Strategijos formavimo
+žingsniai:
+\begin{enumerate}
+  \item esamos padėties analizė (grėsmės, problemos, galimybės);
+  \item vizijos formulavimas (kokias problemas bei grėsmes šalinti);
+  \item strategijos formulavimas (kaip įgyvendinti viziją, kokiomis
+    naujomis galimybėmis pasinaudoti);
+  \item strategijos realizavimas (tikslų medis).
+\end{enumerate}
+
+Sustota: 93 skaidrė.
