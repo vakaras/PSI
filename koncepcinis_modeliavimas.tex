@@ -11,7 +11,97 @@
   \item Kontekstas.
 \end{itemize}
 
+% 7 temos 15 skaidrė.
+
+\Gls{modelis} – \glsentrydesc{modelis}. Modelio naudojimo vietoj originalo
+priežastis yra ta, kad juo lengviau naudotis siekiamų tikslų požiūriu.
+Todėl jo forma turi būti tokia, kuria naudojantis yra patogiausia
+pasiekti modeliavimo tikslus.
+
+\Gls{abstraktusis_modelis} – \glsentrydesc{abstraktusis_modelis}.
+Tvirtinimai ir teiginiai užrašomi kokia nors modeliavimo kalba 
+(pavyzdžiui, UML). Modeliavimo kalbos gali būti įvairaus pobūdžio,
+modeliuose gali būti leidžiama panaudoti piešinius, tekstą bei formules.
+Nagrinėjant abstrakčiuosius modelius, galima nagrinėti modeliavimo
+kalbų semantiką (\gls{modeliavimo_kalbu_semantika}) ir jų notaciją
+(\gls{modeliavimo_kalbu_notacija}).
+
+% FIXME Pertvarkyti: 7 temos 19 skaidrė.
+Modelių panaudojimo tikslai programų sistemų inžinerijoje:
+\begin{itemize}
+  \item atskleisti ir tiksliai aprašyti verslo sistemų struktūrą ir
+    elgseną (pavyzdžiui, verslas gali būti modeliuojamas, siekiant atlikti
+    vidinę jo analizę);
+  \item tiksliai aprašyti būsimos programų sistemos reikalavimus ir
+    jos struktūrą bei elgseną (įvairiais abstrakcijos lygmenimis) ir
+    tuo pačiu sudaryti prielaidas visiems projekto dalyviams tiksliai ir
+    vienareikšmiškai susitarti kokia ta sistema turėtų būti 
+    (reikalavimų modeliavimas, atliekant koncepcinį modeliavimą).
+  \item apgalvoti programų sistemos projektą;
+  \item aprašyti projektavimo sprendimus;
+  \item generuoti įvairius tarpinius darbo rezultatus;
+  \item organizuoti, ieškoti, filtruoti, analizuoti ir redaguoti
+    informaciją apie dideles sistemas;
+  \item ekonomiškai vertinti skirtingus projektavimo sprendimus;
+  \item kuriamai sistemai įgyvendinti.
+\end{itemize}
+
+Programų sistemų inžinerijoje modeliai yra naudojami:
+\begin{itemize}
+  \item modeliuoti kompiuterizuojamas verslo sistemas;
+  \item modeliuoti kuriamų programų sistemų reikalavimus;
+  \item stambiu planu modeliuoti projektuojamas programų sistemas;
+  \item dokumentuoti priimamus projektavimo sprendimus;
+  \item generuoti įvairius tarpinius darbo rezultatus;
+  \item organizuoti, ieškoti, filtruoti, analizuoti ir redaguoti 
+    informaciją apie dideles programų sistemas;
+  \item ekonomiškai vertinti alternatyvius projektavimo sprendimus;
+  \item įgyvendinti kuriamas programų sistemas.
+\end{itemize}
+
+Svarbiausieji modeliavimo lygmenys:
+\begin{enumerate}
+  \item \emph{reikalavimų specifikavimas} – ankstyvosiose projekto 
+    stadijose kuriami aukšto abstrakcijos lygmens modeliai padeda
+    projekto dalyviams mąstyti kryptingai ir išryškina svarbiausias
+    sistemos savybes, tokie modeliai aprašo sistemos reikalavimus ir
+    yra naudojami kaip išeities taškas programų sistemų projektavime;
+  \item \emph{programų sistemos struktūros specifikavimas stambiu planu}
+    – pradinėse projektavimo stadijose kuriamuose modeliuose akcentuojami
+    svarbiausieji būsimos programų sistemos struktūriniai ypatumai, jų
+    paskirtis yra nesigilinant į detales, įsitikinti pagrindinių
+    projektavimo sprendimų korektiškumu;
+  \item \emph{detalus galutinės sistemos specifikavimas} – gaunama
+    visa sistemos kūrimui reikalinga informacija (veikimo logika,
+    algoritmai, duomenų struktūros, sistemos našumo užtikrinimo
+    mechanizmai bei organizaciniai sprendimai apie tai, kaip bus
+    dirbama su sistema);
+  \item \emph{tipinių arba galimų sistemos naudojimo ar veikimo pavyzdžių
+    pateiktis} – daugumai žmonių mąsto ne abstrakčiai, bet manipuliuodami
+    pavyzdžiais, todėl tam, kad jie galėtų suprasti sistemą būtina
+    parengti tinkamus pavyzdžius;
+  \item \emph{išsamus arba dalinis sistemos aprašymas} – 
+    % FIXME Išsiaiškinti kuo skiriasi nuo „detalaus galutinės sistemos
+    % specifikavimo“. (7 temos 39 skaidrė)
+\end{enumerate}
+
+Programų sistemų modeliai turi du aspektus:
+\begin{itemize}
+  % TODO Suprasti ir išsiaiškinti. 7 temos 42 skaidrė.
+  \item \emph{semantinį} – modelyje saugoma prasminė informacija, kuri
+    yra išreikšta panaudojant tam tikrą notaciją (sintaksę);
+  \item \emph{vizualinį} – modelis pateikiamas pavidalu, skirtu palengvinti
+    supratimą.
+\end{itemize}
+
+Modeliai, patys savaime saugo tik dalį informacijos. Norint ja tinkamai
+pasinaudoti reikia turėti kontekstą, kuris nurodo kaip turi būti 
+interpretuojama modeliuose pateikta informacija ir kaip siejasi modelių
+informacija tarpusavyje.
+
 \subsection{UML}
+
+% 7 temos 44 skaidrė
 
 \subsubsection{Kas tai yra UML?}
 
@@ -19,6 +109,77 @@
   \item UML istorija.
   \item UML diagramos.
 \end{itemize}
+
+\gls{UML} – \glsentrydesc{UML}. Ši kalba yra pagrįsta objektine paradigma.
+Objektinėje paradigmoje sistema yra traktuojama, kaip rinkinys tarpusavyje
+susietų ir pranešimais besikeičiančių objektų. Objektai sudaro ansamblį
+(\gls{ansamblis}), jame yra pasiskirstę vaidmenimis ir visi kartu siekia
+tikslų, numatytų tos sistemos reikalavimais.
+
+Objektinėje paradigmoje objektai turi:
+\begin{itemize}
+  \item \emph{tapastis} – % FIXME Išsiaiškinti: kas tai? 7 temos 46 skaidrė
+  \item \emph{būsenas} – jos nusakomos objekto savybių (atributų)
+    reikšmėmis;
+  \item \emph{elgseną} – ji aprašoma vykdomomis operacijomis, kurios
+    yra vykdomos, kaip atsakas į objekto gautus pranešimus.
+\end{itemize}
+
+Modeliuojant sistemas UML yra naudojama trylika\footnote{UML 2 turi 
+daugiau} skirtingų diagramų:
+\begin{itemize}
+  \item elgsenos diagramos:
+    \begin{itemize}
+      \item \emph{užduočių diagrama};
+      \item sąveikos diagramos:
+        \begin{itemize}
+          \item \emph{sekų diagrama};
+          \item \emph{komunikavimo diagrama};
+        \end{itemize}
+    \end{itemize}
+  \item statinės struktūros diagramos:
+    \begin{itemize}
+      \item \emph{klasių diagrama};
+      \item \emph{objektų diagrama};
+      \item \emph{paketų diagrama};
+    \end{itemize}
+  \item dinaminio modeliavimo diagramos:
+    \begin{itemize}
+      \item \emph{būsenų diagrama};
+      \item \emph{veiklos diagrama};
+    \end{itemize}
+  \item realizavimo diagramos:
+    \begin{itemize}
+      \item \emph{komponentų diagrama};
+      \item \emph{išdėstymo diagrama}.
+    \end{itemize}
+\end{itemize}
+
+% FIXME Kur šitai grūsti? 7 tema 62 skaidrė.
+Sąveikos diagramos parodo objektų tarpusavio sąveiką sistemos vykdymo
+metu. Sąveikos diagramos apima:
+\begin{itemize}
+  \item sekų diagramas, parodančias objektų sąveikos nuoseklumą;
+  \item komunikavimo diagramas, parodančias sąveikoje dalyvaujančių objektų
+    struktūrą;
+  \item sąveikos apžvalgos diagramas, susiejančias sąveikos fragmentus su
+    aukšto lygmens darbų srautais;
+  \item chronometražo \eng{timing} diagramos, skirtos laiko ribojimams
+    aprašyti modeliuojant realiame laike veikiančias sistemas.
+\end{itemize}
+
+% 7 temos 68 skaidrė.
+UML diagramos naudojamos trims skirtingiems tikslams:
+\begin{enumerate}
+  \item \emph{koncepciniam modeliavimui} – modeliuoti realaus pasaulio
+    sistemas (pavyzdžiui, verslo sistemas);
+  \item \emph{kuriamų sistemų specifikavimui}, bei jų projektavimui
+    koncepciniu ir architektūriniu lygmenimis;
+  \item \emph{kuriamoms sistemoms realizuoti} – projektuoti eskiziniu
+    ir detaliuoju lygmenimis.
+\end{enumerate}
+
+% TODO Suprasti ir įvesti 7 temos 72-78 skaidrė
 
 \subsubsection{Užduočių diagramos}
 
@@ -37,6 +198,31 @@
   \item Laiko ir kitų trigerių modeliavimas.
   \item Užduočių ir funkcijų skirtumai.
 \end{itemize}
+
+% 7 temos 55 skaidrė.
+
+Užduočių \eng{use case} diagrama parodo sistemos išorėje esančius sistemos 
+naudotojus
+ir jų sąryšius su sistemos vykdomomis užduotimis (sistemos panaudojimo
+būdais). Užduočių diagramomis yra aprašomas verslo, programų ar kokios
+nors kitos sistemos funkcionalumas. Dažniausiai užduočių esmė yra
+aprašoma prie diagramos papildomai pridedamu formalizuotos struktūros
+tekstiniu aprašu. Sistema yra traktuojama, kaip juodoji dėžė.
+
+% 7 temos 79 skaidrė.
+Užduočių diagramomis modeliuojamas globalus (stambaus plano) požiūris
+į sistemą – paprastai jis vadinamas išoriniu požiūriu.
+
+% TODO Suprasti ir įvesti: 7 temos 80-145 skaidrė.
+
+% 7 temos 146 skaidrė.
+Užduočių ir funkcijų skirtumai:
+\begin{itemize}
+  \item užduotys aprašo tam tikrus sistemos naudotojo tikslus;
+  \item sistemos funkcijos realizuoja užduotis.
+\end{itemize}
+
+% TODO Suprasti ir įvesti: 7 temos 148-199 skaidrė.
 
 \subsubsection{Paketai}
 
@@ -73,6 +259,15 @@
   \item Papildomos konstrukcijos.
 \end{itemize}
 
+% 7 tema 63 skaidrė
+Sekų diagrama visuomet yra susiejama su konkrečia užduotimi ir parodo, kaip
+objektai, keisdamiesi pranešimais, įgyvendina ta užduotimi numatytą
+funkcionalumą.
+
+% 7 tema 200 skaidrė.
+
+% TODO: Suprasti ir įvesti 201-248.
+
 \subsubsection{Komunikavimo diagramos}
 
 \begin{itemize}
@@ -90,13 +285,94 @@
   \item Tipinių projektavimo sprendimų modeliavimas.
 \end{itemize}
 
+% 7 temos 64 skaidrė.
+
+Komunikavimo diagrama parodo elementų vaidmenis, atsakomybes ir ryšius
+konkrečios užduoties, objekto, ansamblio, klasės ar veiklos kontekste.
+
+% 7 tema 249 skaidrė.
+
+% TODO: Suprasti ir įvesti 250-267
+
 \subsubsection{Klasių diagramos}
 
 Tingiu… (7 tema, 7 skaidrė)
 
+% 7 temos 56 skaidrė.
+
+Klasių diagrama aprašo statinę sistemos struktūrą. Klasės aprašo tai,
+ką apdoroja sistema (verso sistemoje – verslo objektus, informacinėje
+sistemoje – informacinius objektus, programų sistemoje – duomenis).
+Jos gali būti susijusios tarpusavyje įvairiais būdais:
+\begin{itemize}
+  \item asociacija – susietos ryšiais;
+  \item priklausymu tam pačiam paketui;
+  \item specializacija – viena klasė yra kitos klasės specializacija;
+  \item priklausymu – pavyzdžiui, viena klasė gali naudoti kitą.
+\end{itemize}
+Klasių diagramose parodoma vidinė klasių struktūra ir visi klasių
+tarpusavio ryšiai.
+
+% 7 temos 58 skaidrė.
+\emph{Objektų diagramos} yra atskiras klasių diagramų atvejis. Vietoj
+klasių, jose vaizduojami tų klasių objektai. Objektų diagrama yra konkreti
+klasių diagramos realizacija pasirinktu laiko momentu. Ji naudojama
+klasių diagramai iliustruoti.
+
+% 7 tema 268 skaidrė.
+
+% TODO: Suprasti ir įvesti 269-321
+
+Klasės ir tipai:
+\begin{itemize}
+  \item \emph{tipas}:
+    \begin{itemize}
+      \item protokolas, kurį supranta objektas;
+      \item leistinų operacijų rinkinys;
+    \end{itemize}
+  \item \emph{klasė}:
+    \begin{itemize}
+      \item realizavimo konstrukcija;
+      \item realizuoja vieną ar kelis tipus.
+    \end{itemize}
+\end{itemize}
+Java programavimo kalboje tipai aprašomi sąsajomis, o C++ – abstrakčiomis
+klasėmis.
+
+% TODO: Suprasti ir įvesti 7 temos 322-358.
+reifikacija – filosofijoje sudaiktinimas, laikymas ko nors daiktu, nors
+tai nėra daiktas (DLKŽ).
+
+% TODO: Suprasti ir įvesti 7 temos 360-450.
+% Objektų diagramos 7 temos 451 skaidrė
+% TODO: Suprasti ir įvesti 7 temos 452-463
+
 \subsubsection{Būsenų diagramos}
 
 Tingiu… (7 tema, 8 skaidrė)
+
+% 7 temos 59 skaidrė.
+Būsenų diagramos (mašinos) papildo klasių diagramą. Kiekviena klasė gali
+turėti savą būsenų diagramą, parodančią visas galimas tos klasės objektų
+būsenas. Būsenų diagramos gali būti dviejų rūšių:
+\begin{itemize}
+  % FIXME Suprasti ir paaiškinti. 7 temos 60 skaidrė.
+  \item \emph{elgseną aprašančios būsenų mašinos} – jose parodoma, kokie
+    išoriniai įvykiai iššaukia būsenų pokyčius ir kokie veiksmai yra
+    atliekami keičiant būsenas (kitaip tariant, yra aprašomi klasių
+    gyvavimo ciklai);
+  \item \emph{protokolus aprašančios būsenų mašinos} – jose pagrindinis
+    dėmesys yra skiriamas perėjimams iš būsenos į būseną ir taisyklėms,
+    nusakančioms operacijų vykdymo tvarką.
+\end{itemize}
+Ji taip pat parodo, kokie išoriniai įvykiai iššaukia būsenų
+pokyčius ir kokie veiksmai yra atliekami keičiant būsenas. Tokios
+diagramos vadinamos elgseną aprašančiomis būsenų mašinomis. Be jų dar yra
+protokolus aprašančios būsenų mašinos.
+
+% 7 temos 464 skaidrė.
+
+% TODO Suprasti ir įdėti 7 temos 465-574. (Visiškai nepagavau.)
 
 \subsubsection{Veiklos diagramos}
 
@@ -124,6 +400,22 @@ Tingiu… (7 tema, 8 skaidrė)
   \item UML diagramų tarpusavio ryšiai.
 \end{itemize}
 
+% 7 temos 61 skaidrė
+Veiklos aprašo veiksmų srautus. Pagrindinė jų paskirtis yra aprašyti
+procesų darbų srautus, tačiau jos gali būti panaudotos ir kitiems tikslams.
+Pavyzdžiui, užduočių ar procedūrų valdymo srautams aprašyti.
+
+\begin{note}
+  Veiklos diagramoje galima aprašyti ne tik tai, kokie veiksmai ir kokia
+  eilės tvarka yra vykdomi atliekant veiklą, bet ir siunčiamus pranešimus
+  bei objektus, perduodamus iš vieno veiksmo kitam.
+\end{note}
+
+% 7 temos 575 skaidrė.
+
+% TODO Išsiaiškinti kas per velnias yra „klasifikatorius“ (7 temos 581).
+% TODO Išsiaiškinti ir įdėti: 7 temos 576-657.
+
 \subsubsection{Komponentų diagramos}
 
 \begin{itemize}
@@ -147,6 +439,17 @@ Tingiu… (7 tema, 8 skaidrė)
   \item Komponentai ir užduotys.
 \end{itemize}
 
+% 7 temos 65 skaidrė.
+% FIXME Kaip suprasti „fizinę struktūrą“?
+Komponentų diagrama aprašo fizinę sistemos struktūrą (iš kokių komponentų
+yra sudaryta ta sistema). Diagramoje kiekvienam komponentui yra parodoma, 
+kokias klases tas komponentas įgyvendina bei parodomos visos komponentų
+tarpusavio priklausomybės.
+
+% 7 temos 658 skaidrė.
+
+% TODO Išsiaiškinti ir įdėti: 7 temos 659-734.
+
 \subsubsection{Išdėstymo diagramos}
 
 \begin{itemize}
@@ -165,6 +468,15 @@ Tingiu… (7 tema, 8 skaidrė)
   \item Manifestavimas.
 \end{itemize}
 
+% 7 temos 66 skaidrė.
+Išdėstymo diagramos aprašo fizinę sistemos architektūrą (susieja sistemos
+komponentus su atitinkama technine įranga). Taip pat jos parodo, kaip
+sistemos komponentai yra išdėstyti kompiuterių tinkluose.
+
+% 7 temos 734 skaidrė.
+
+% TODO Išsiaiškinti ir įdėti: 7 temos 735-780.
+
 \subsubsection{Paketų diagramos}
 
 \begin{itemize}
@@ -178,6 +490,10 @@ Tingiu… (7 tema, 8 skaidrė)
   \item Sistemos struktūros modeliavimas paketais.
   \item Modelių pakavimas.
 \end{itemize}
+
+% 7 temos 781 skaidrė.
+
+% TODO Išsiaiškinti ir įdėti: 7 temos 782
 
 \subsubsection{Papildomos priemonės}
 
