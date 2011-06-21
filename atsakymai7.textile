@@ -366,15 +366,66 @@ Sudėtiniai objektai – tai objektai, sudaryti iš tampriai tarpusavyje susiet�
 Tokie objektai yra sudėtinių klasių realizacijos.
 Jie vaizduojami kaip statiniai modeliai ir modeliuojami panaudojant kompozicijas.
 
-68. Išvardinkite būsenų diagramos elementus ir paaiškinkite kaip jie vaizduojami. (6 465)
-69. Kokia yra būsenų diagramų paskirtis? (4 59)
-70. Kas vadinama būsena? Kaip nustatyti, kokias būsenas turi objektas? Kaip modeliuojamos būsenos? (6 480, 488)
-71. Paaiškinkite, kas vadinama perėjimu, perėjimo sąlyga ir perėjimo veiksmu. ++++(4 481)
+68. Išvardinkite būsenų diagramos elementus ir paaiškinkite kaip jie vaizduojami. (6 #465–466)
+* Būsenos
+** pradinė
+** pabaigos
+** sudėtinė
+* Perėjimai
+** vidiniai
+** sudėtiniai
+** nupjauti
+* Valdančiosios piktogramos
+** signalo siuntimas
+** signalo gavimas
+** atidėtas įvykis
+* Ribojimai
+** perėjimo sąlyga
+** _when_
+** _after_
+* Veiksmai
+** _enter_
+** _exit_
+** _do_
+** _on_
+** _send_ aprašai
+* Pastabos
+* Įvykiai
+** keičiantys įvykiai
+** signalai
+** kvietimai
+** laiko įvykiai
+* Šakojimai
+** valdymo iššakojimas
+** lygiagrečios gijos
+** sinchronizacija
+TODO: vaizdavimas
+
+69. Kokia yra būsenų diagramų paskirtis? (4 #59, #479)
+Būsenų diagrama papildo klasių diagramą, parodydama visas galimas tos klasės būsenas, jų pokyčius iššaukiančius išorinius įvykius bei veiksmus, atliekamus keičiant būsenas.
+
+70. Kas vadinama būsena? Kaip nustatyti, kokias būsenas turi objektas? Kaip modeliuojamos būsenos? (6 #480, #488–492, #498)
+Būsena: Objekto „nuotrauka“ (jo atributų reikšmių visuma) kokiu nors to objekto gyvavimo laikotarpiui priklausančiu laiko momentu.
+Objekto turimas būsenas sudaro visi galimi tam tikrų sąlygų tenkinimo, veiksmų vykdymo ar laukimo, kol jie įvyks, variantai tam tikro laiko intervalo metu.
+Būsena žymima stačiakampiu užapvalintais kampais. Žymuo turi vieną arba daugiau iš šių neprivalomų sekcijų: kintamųjų, pavadinimo, vidinių perėjimų, vidinių veiklų ir dekompozicijos.
+
+71. Paaiškinkite, kas vadinama perėjimu, perėjimo sąlyga ir perėjimo veiksmu. (4 #481)
+Pereiga vaizduoja dvi objekto būsenas siejantį sąryšį. Pagal šį sąryšį pereinama iš vienos būsenos į kitą.
+Perėjimo sąlyga (transition guard) aprašo, kokia sąlyga turi būti patenkinta, kad šia sąlyga apsaugota pereiga įvyktų perėjimas.
+Perėjimo veiksmas (transition action) – tai nepertraukiama operacija, vykstanti perėjimo metu.
+
 72. Kas vadinama sudėtiniu perėjimu? Kokia tokių perėjimų paskirtis? Kaip jie modeliuojami būsenų diagramose? (5 533)
 73. Kas vadinama nukirstuoju perėjimu? Kokia tokių perėjimų paskirtis? Kaip jie modeliuojami būsenų diagramose? (5 539)
 74. Kas vadinama vidiniu perėjimu? Kokia tokių perėjimų paskirtis? Kaip jie modeliuojami būsenų diagramose? (5 544)
-75. Kas vadinama sudėtine (įdėtine) būsena? Kokia tokių perėjimų paskirtis? Kaip jos modeliuojamos būsenų diagramose? (6)
-76. Kas vadinama įvykiu? Kokiems tikslams jie naudojami modeliuose? Kaip jie modeliuojami būsenų diagramose? (6)
+75. Kas vadinama sudėtine (įdėtine) būsena? Kokia tokių perėjimų paskirtis? Kaip jos modeliuojamos būsenų diagramose? (6 #504–511)
+Sudėtinės būsenos dekomponuojamos į _„ir“ būsenas_ (tarsi vidinės būsenų diagramos) arba _„arba“ būsenas_ (alternatyvios būsenos, atskirtos punktyrinėmis linijomis). Kelių būsenų sudėjimas į vieną leidžia jas vaizduoti skirtingais abstrakcijos lygmenimis bei dekomponuoti į kelias nuoseklias ar lygiagrečias būsenas.
+Kokių tokių perėjimų? XXX: kreivas klausimas
+
+76. Kas vadinama įvykiu? Kokiems tikslams jie naudojami modeliuose? Kaip jie modeliuojami būsenų diagramose? (6 #512–524)
+Įvykis – tai koks nors reikšmingas atsitikimas, galintis iššaukti perėjimą iš vienos būsenos į kitą.
+Naudojami objektų perėjimui į kitas būsenas kontroliuoti.
+Modeliuojami rodykle nurodant, iš kurios būsenos į kurią pereinama, ir prie jos užrašant perėjimo eilutę (įvykio pavadinimas(parametras, ...) [perėjimo sąlyga] / veiksmo reiškinys ^ _send_ sakinys).
+
 77. Kaip būsenų diagramose yra modeliuojamas šakojimasis? (2)
 78. Kas vadinama būsenos istorijos indikatoriumi? Kam jų reikia? Kaip jie modeliuojami būsenų diagramose? (4)
 79. Kaip būsenų diagramose yra modeliuojami konstruktoriai ir destruktoriai? (4)
