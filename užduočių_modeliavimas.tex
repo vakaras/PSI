@@ -1,0 +1,74 @@
+\subsection{Užduočių modeliavimas}
+
+% 8 temos 2 skaidrė.
+
+Užduotis \eng{use case} apibrėžia scenarijų (\gls{scenarijus}), kuris 
+aprašo, kaip \gls{agentas} naudojasi sistema savo specifiniams tikslams 
+pasiekti. Užduočių modelį sudaro visų su sistema dirbančių agentų
+ir visų tų agentų vykdomų užduočių visuma.
+
+Užduočių modeliai:
+\begin{itemize}
+  \item padeda suprasti, kaip naudotojai įsivaizduoja būsimos sistemos
+    funkcinius reikalavimus;
+  \item yra išeities taškas, nuo kurio pradedama nustatinėti, kokios
+    klasės, ryšiai ir būsenos yra reikalingi būsimoje sistemoje;
+  \item yra pagrindas naudotojo sąsajai projektuoti;
+  \item yra išeities taškas būsimos sistemos testams projektuoti.
+\end{itemize}
+
+Užduočių modeliai nusako visą būsimos sistemos funkcionalumą (sistemos
+elgseną, kaip ją mato išoriniai stebėtojai).
+
+Užduočių modeliai naudojami:
+\begin{itemize}
+  \item sistemos reikalavimams vertinti;
+  \item sistemos funkcionalumui aptarinėti (tarp užsakovų, vykdytoj̇ų ir
+    kitų suiinteresuotų šalių);
+  \item testavimo planui rengti;
+  \item sistemos naudotojų instrukcijoms rengti.
+\end{itemize}
+
+Jei užduočių modeliai yra rengiami modeliuojant verslo procesus, tai
+nagrinėjamoji sistema yra tapatinam su visa tą verslą vykdančia
+organizacija, o jei rengiami kuriamai programų sistemai, tai nagrinėjamoji
+sistema ir yra ta kuriamoji programų sistema.
+
+% 8 temos 17 skaidrė.
+
+Apie užduotį (taip pat ir kiekvieną jos žingsnį) būtina žinoti:
+\begin{itemize}
+  \item vykdymo sritį – kokia sistema yra nagrinėjama;
+  \item pirminį agentą – kas siekia tikslo;
+  \item lygmenį – kokio lygmens yra siekiamas tikslas.
+\end{itemize}
+Taip pat nagrinėjant užduotį dažnai yra svarbu:
+\begin{itemize}
+  \item „prieš“ ir „po“ sąlygos – kokios sąlygos turi būti patenkintos
+    prieš pradedant vykdyti užduotį ir kokie teiginiai tampa teisingi
+    ją įvykdžius;
+  \item pagrindinis sėkmės scenarijus – atvejis, kai viskas vyksta
+    sėkmingai (nesusidaro jokių ypatingų sistuacijų);
+  \item plėtiniai – kokios ypatingos situacijos gali susidaryti 
+    vykdant scenarijų.
+\end{itemize}
+
+Bet kuri iš užduočių turi būti apibrėžta viename iš šių lygmenų:
+\begin{itemize}
+  \item sumarinis tikslas – naudotojo tikslų rinkinys;
+  \item naudotojo tikslas – savo darbą siekiančio atlikti pirminio agento
+    tikslas;
+  \item subfunkcija – potikslis arba scenarijaus žingnis, esantis už
+    naudotojo tiesioginių interesų ribų (pavyzdžiui, prisijungimas
+    prie sistemos).
+\end{itemize}
+
+% TODO Suprasti ir įvesti 8 temos 65-66 skaidrės.
+
+\Gls{scenarijaus_sprogimas} – \glsentrydesc{scenarijaus_sprogimas}.
+Siekiant išvengti šios situacjos yra naudojamos trys technikos:
+\begin{itemize}
+  \item použduotys (\emph{«include»} priklausmybė);
+  \item plėtiniai (\emph{«extend»} priklausomybė);
+  \item variantai.
+\end{itemize}
