@@ -1,0 +1,215 @@
+\section{Reikalavimai}
+
+% 9 tema 3 skaidrė.
+
+\Gls{sistemos_reikalavimas} – \glsentrydesc{sistemos_reikalavimas}.
+Reikalavimai gali būti labai skirtingo abstrakcijos lygmens – nuo 
+labai bendrų sistemos ar jos teikiamų paslaugų ribojimų iki detalios
+matematinės sistemos savybių specifikacijos. To išvengti nėra įmanoma
+dėl dvigubos reikalavimų paskirties:
+\begin{itemize}
+  \item viena vertus, jie naudojami skelbiant konkursą sistemai sukurti
+    ir todėl turi būti pakankamai bendro pobūdžio, kad konkurse galėtų
+    dalyvayti kuo daugiau pretendentų;
+  \item kita vertus, jie yra pagrindinė sandorio tarp užsakovo ir vykdytojo
+    dalis ir todėl turi būti suformuluoti kuo tiksliau ir išsamiau.
+\end{itemize}
+
+\Gls{reikalavimu_nustatymas} – \glsentrydesc{reikalavimu_nustatymas}.
+
+Reikalavimų rūšys:
+\begin{itemize}
+  \item \emph{naudotojo reikalavimai (operaciniai poreikiai)} – turi 
+    taip aprašyti reikalavimus, kad jie būtų suprantami žmonėms, tik
+    paviršutiniškai susipažinusiems su tuo, kas yra kompiuteriai ir
+    programų sistemos (šie reikalavimai skirti būsimiesiems sistemos
+    naudotojams bei jos užsakovams);
+  \item \emph{sistemos reikalavimai} – tam tikru specialiu būdu 
+    struktūrizuotas detalus sistemos teikiamų paslaugų ir jos tenkinamų
+    ribojimų aprašas (rašomi, kaip sudėtinė užsakovo ir vykdytojo
+    sandorio dalis);
+  \item \emph{projektiniai reikalavimai} – abstraktus programų sistemos
+    įgyvendinimo būdo aprašas, naudjamas, kaip išeities ribojimai detaliai
+    projektuojant sistemą (skirti vykdytojams – susieja sistemos 
+    reikalavimus su jos realizacija).
+\end{itemize}
+
+\Gls{reikalavimu_formulavimas} – \glsentrydesc{reikalavimu_formulavimas}.
+
+\Gls{reikalavimu_specifikacija} – \glsentrydesc{reikalavimu_specifikacija}.
+
+Gerai suformuluoto reikalavimo savybės:
+\begin{itemize}
+  \item \emph{abstraktus} – specifikuoja operacinę (stebimą iš išorės)
+    sistemos savybę ir nieko nekalba apie tai, kaip tą savybę realizuoti
+    sistemoje (juodosios dėžės principas);
+  \item \emph{išsamus} – turi prasmę ne tik tada, kai yra nagrinėjamas
+    kartu su kitais reikalavimais, bet ir tuomet, kai jis nagrinėjamas
+    atskirai;
+  \item \emph{tikslus} – visi jame naudojami terminai turi griežtai
+    apibrėžtas reikšmes;
+  \item \emph{vienareikšmis} – jį galima interpretuoti vieninteliu būdu;
+  \item \emph{verifikuojamas} – žinomas ir prieinamas baigtinis ir kainos
+    bei kitais požiūriais priimtinas procesas, kurį taikant galima
+    nustatyti, ar reikalavimas tikrai yra įgyvendintas;
+  \item \emph{įgyvendinamas} – žinomas ir prieinamas toks ekonominiu,
+    juridiniu bei kitais požiūriais priimtinas technologinis procesas,
+    kurio inovaciniai slenksčiai gali būti pašalinti per priimtiną
+    laikotarpį ir už priimtiną kainą ir kurį taikant galima sukurti
+    sistemą, turinčią tuo reikalavimų specifikuojamą savybę;
+  \item \emph{integruojamas} – sujungus jį su kitais reikalavimais yra
+    gaunamas tarpusavyje suderintų reikalavimų rinkinys;
+  \item \emph{lokalizuojamas} – jį galma susieti su vienu ar keliais
+    konkrečiais kuriamos sistemos komponentais, įgyvendinančiais tą
+    reikalavimą;
+  \item \emph{trasuojamas} – vienareikšmiškai įvardinamas;
+  \item \emph{unikalus} – jame neturi būti kartojama kituose reikalavimuose
+    pateikta informacija;
+  \item \emph{glaustas} – jame nėra pagrindimo, apibrėžčių ir kitų
+    nebūtinų dalykų;
+  \item \emph{suprantamas} – jame nėra vartojami tik specialistams 
+    suprantami terminai ir yra aiškiai pasakyta, kokią funkcinę ar 
+    nefunkcinę savybę privalo turėti sistema.
+\end{itemize}
+
+% 9 temos 21 skaidrė.
+
+\Gls{funkcinis_reikalavimas} – \glsentrydesc{funkcinis_reikalavimas}.
+
+\Gls{nefunkcinis_reikalavimas} – \glsentrydesc{nefunkcinis_reikalavimas}.
+Nefunkciniai reikalavimai apima ribojimus sistemos paslaugų teikimo būdui
+(pavyzdžiui, nurodoma maksimali užklausos trukmė), jos įgyvendinamoms
+funkcijoms bei standartus, kurių privalu laikytis. Projekto valdymo
+reikalavimai tiap pat yra nefunkciniai reikalavimai.
+
+% 9 temos 56 skaidrė.
+
+Veikimo ribojimai apima:
+\begin{itemize}
+  \item tikslumo;
+  \item patikimumo – programų sistemos trykių neigiamo poveikio naudotojų
+    verslo tikslams dydis;
+  \item gyvybingumo – programų sistemos geba apsaugoti jos kritines
+    funkcijas nuo trykių poveikio;
+  \item robastiškumo – sugebėjimas atkurti savo prarastą funkcionalumą,
+    ypač, praradus jį dėl klaidingų duomenų arba dėl kokių nors ypatingų
+    situacijų;
+  \item našumo
+\end{itemize}
+reikalavimus.
+
+% 9 temos 86 skaidrė.
+Quint – plačiai naudojamas programinės įrangos kokybės standarto
+ISO 9126 plėtinys. Kokybės atributai:
+\begin{itemize}
+  \item \emph{funkcionalumas} (kokiu mastu sistemos funkcijos tenkina
+    užsakovo (naudotojų) poreikius ir ar tos funkcijos turi pageidaujamas
+    savybes):
+    \begin{itemize}
+      \item tinkamumas \eng{suitability} – sistemos funkcijų tinkamumas
+        naudotojų poreikiams tenkinti ir jų išsamumas;
+      \item tikslumas \eng{accuracy} – apibūdina, kokiu tikslumu sistema
+        atlieka skaičiavimus bei kitus perdirbimus;
+      \item kooperatyvumas \eng{interoperability} – sistemos gebėjimas
+        kooperuotis su kitomis sistemomis;
+      \item darnumas \eng{compliance} – apibūdina, kokiu mastu sistema
+        yra suderinta su galiojančiais teisės aktais ir dalykinėje
+        srityje galiojančiais standartais bei susitarimais;
+      \item apsaugotumas \eng{security} – apibūdina sistemos gebėjimą
+        apsisaugoti nuo tyčinio ar netyčinio neteisėto jos funkcionalumo
+        ar joje saugomų duomenų panaudojimo;
+      \item trasuojamumas \eng{traceability} – apibūdina pastangas,
+        kurių reikia tam, kad pasirinktuose programos taškuose būtų
+        galima patikrinti tarpinių skaičiavimų rezultatų teisingumą;
+    \end{itemize}
+  \item \emph{patikimumas} \eng{reliability} (programų sistemos gebėjimas,
+    tinkamai eksploatuojant tą sistemą, specifikacijoje nurodytą laiko
+    tarpą išlikti korektiška ir produktyvia):
+    \begin{itemize}
+      \item išbaigtumas \eng{maturity} – programoje esančių klaidų 
+        sukeliamų trykių dažnis;
+      \item atsparumas trykiams \eng{fault tolerance} – apibūdina, kokiu
+        mastu sistema geba išlikti korektiška ir produktyvi, po
+        trykių ar įsilaužimų;
+      \item atkuriamumas \eng{recoverability} – apibūdina pastangas,
+        reikalingas atkurti po trykio prarastą sistemos funkcionalumą
+        ir/arba duomenis;
+      \item prieinamumas \eng{availability} – laikas, per kurį galima
+        pasinaudoti sistema, jei jos prireikia;
+      \item pažeidžiamumas \eng{degradability} – pastangos, reikalingos
+        atkurti esmines sistemos funkcijas, jai praradus savo 
+        funkcionalumą;
+    \end{itemize}
+  \item \emph{perkeliamumas} \eng{portability} (galimybė kelti programų
+    sistemą iš vienos platformos į kitą):
+    \begin{itemize}
+      \item adaptuojamumas \eng{adaptability} – apibūdina galimybę perkelti
+        sistemą į kitą platformą, nedarant tos sistemos pakeitimų;
+      \item įrašymo paprastumas \eng{installability} – apibūdina sistemai 
+        įrašyti reikalingas pastangas;
+        % FIXME Aiškiai parodyti skirtumą:
+        % įrašymas – procesas, kurio metu sistemą įrašoma į kompiuterį;
+        % įdiegimas – didesnis procesas, kuris apima įrašymą bei visokius
+        % darbuotojų apmokymus ir panašiai.
+      \item atitikimas standartams \eng{conformance} – apibūdina sistemos
+        atitikimą perkeliamumo standartams ir susitarimams;
+      \item pakeičiamumas \eng{replaceability} – apibūdina pastangas,
+        reikalingas anksčiau naudotą kitą sistemą pakeisti naująja sistema;
+    \end{itemize}
+  \item \emph{panaudojamumas} (pastangos, kurių reikia naudotojams
+    pasinaudoti sistema):
+    \begin{itemize}
+      \item suprantamumas \eng{understandability} – pastangos, kurių
+        reikia naudotojui, kad perprastų sistemos koncepciją ir jos
+        naudojimo būdą;
+      \item išmokstamumas \eng{learnability} – pastangos, kurių 
+        naudotojui reikia išmokti naudotis sistema;
+      \item operabilumas \eng{operability} – kiek naudotojo pastangų
+        reikia dirbant su sistema;
+      \item būsenos vizualizavimas \eng{explicitness} – vertina sistemos
+        gebėjimą informuoti apie tai, kas su ja vyksta;
+      \item individualizuojamumas \eng{customisability} – galimybės
+        prisitaikyti sistemą savo individualiems poreikiams;
+      \item patrauklumas \eng{attractivity} – vertina, kokiu mastu
+        sistemos teikiamos paslaugos, jos elgsena bei jos naudojami
+        informacijos vizualizavimo bei pateikties būdai tenkina 
+        išreikštiniu būdu nesuformuluotus naudojo pageidavimus bei
+        nuostatas.
+      \item aiškumas \eng{clarity} – vertina, kokiu mastu naudotojui
+        akivaizdu, ką moka daryti sistema;
+      \item informatyvumas \eng{helpfulness} – vertina, kokiu mastu
+        naudotojams yra prieinama informacinė medžiaga;
+      \item patogumas naudotojui \eng{user-friendliness} – vertina
+        naudotojo pasitenkinimą sistema;
+    \end{itemize}
+  \item \emph{našumas} \eng{efficiency} (programų sistemos veikimo greičio
+    ir, prie nurodytų sąlygų, jos naudojamų resursų santykis):
+    \begin{itemize}
+      \item našumas pagal laiką \eng{time behaviour} – apima sistemos
+        reakcijos laiką, skaičiavimų trukmę ir jos pralaidumą
+        (gebėjimą per tam tikrą laiką apdoroti tam tikrą įvykių skaičių);
+      \item našumas pagal resursus \eng{resource behaviour} – kiek
+        resursų ir kiek laiko naudoja sistema vykdydama savo funkcijas;
+    \end{itemize}
+  \item \emph{prižiūrimumas} \eng{maintainability} (pastangos, reikalingos
+    sistemai perdaryti):
+    \begin{itemize}
+      \item analizuojamumas \eng{analysability} – pastangos, kurių
+        reikia sistemos defektų ar trykių priežastims nustatyti bei
+        išsiaiškinti, kurią sistemos dalį reikia keisti;
+      \item keičiamumas \eng{changeability} – pastangos, kurių reikia 
+        sistemos klaidai pašalinti ar padaryti pakeitimus, pritaikant
+        sistemą jos aplinkos pokyčiams;
+      \item stabilumas \eng{stability} – pakeitimų iššaukiamų, netikėtų
+        efektų rizika;
+      \item testuojamumas \eng{testability} – pastangos, kurių reikia
+        sistemos korektiškumui (pradžioje ar padarius pakeitimus)
+        patikrinti;
+      \item valdomumas \eng{manageability} – pastangos, kurių reikia
+        padaryti sistemą veikiančia ar jos veikimui atkurti;
+      \item tiražuojamumas \eng{reusability} – vertina, kokiu mastu sistemą
+        ar jos dalis galima pakartotinai panaudoti kituose projektuose.
+    \end{itemize}
+\end{itemize}
+
+% TODO Suprasti ir įvesti: 9 temos 142-166.
