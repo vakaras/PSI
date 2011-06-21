@@ -1,0 +1,410 @@
+1. Kas vadinama modeliu? (2 #15)
+Modelis – tai aiškiai nusakytą tikslinę paskirtį turintis supaprastintas sistemos, proceso, reiškinio ar kokio nors kito originalo analogas, tapatus tam originalui modeliavimo tikslų požiūriu.
+
+2. Kas vadinama abstrakčiuoju modeliu? (2 #17)
+Abstrakčiuoju modeliu vadinamas teisingų tvirtinimų (teoremų) ir galbūt teiginių apie originalo statines ir dinamines charakteristikas rinkinys.
+
+3. Kokiems tikslams naudojami modeliai programų sistemų inžinerijoje? (4 #19–34)
+* Atskleisti ir tiksliai aprašyti verslo sistemų struktūrą ir elgseną (modeliuoti verslą tikslu atlikti vidinę analizę).
+* Tiksliai aprašyti būsimos PS reikalavimus ir jos struktūrą bei elgseną (įvairiais abstrakcijos lygmenimis) ir tuo pačiu sudaryti prielaidas visiems projekto dalyviams tiksliai ir vienareikšmiškai susitarti kokia ta sistema turėtų būti (reikalavimų modeliavimas, atliekant koncepcinį projektavimą).
+* Apgalvoti PS projektą.
+* Aprašyti projektavimo sprendimus.
+* Generuoti įvairius tarpinius darbo rezultatus.
+* Organizuoti, ieškoti, filtruoti, analizuoti ir redaguoti informaciją apie dideles sistemas.
+* Ekonomiškai vertinti skirtingus projektavimo sprendimus.
+* Kuriamai sistemai įgyvendinti.
+Trumpiau:
+* modeliuoti kompiuterizuojamas verslo sistemas;
+* modeliuoti kuriamų programų sistemų reikalavimus;
+* stambiu planu modeliuoti projektuojamas programų sistemas;
+* dokumentuoti priimamus projektavimo sprendimus;
+* generuoti įvairius tarpinius darbo rezultatus;
+* organizuoti, ieškoti, filtruoti, analizuoti ir redaguoti informaciją apie
+* dideles programų sistemas;
+* ekonomiškai vertinti alternatyvius projektavimo sprendimus;
+* įgyvendinti kuriamas programų sistemas.
+TODO: sujungti
+
+4. Kiek lygmenų turi programų sistemų inžinerijoje naudojami modeliai? Kodėl? (4 #35–40)
+Penkis: reikalavimų specifikavimo, PS struktūros specifikavimo stambiu planu, detalaus galutinės sistemos specifikavimo, tipinių ar galimų sistemos naudojimo ar veikimo pavyzdžių ir išsamaus arba dalinio sistemos aprašymo.
+Trumpiau: reikalavimai, struktūra, detali specifikacija, veikimo bei naudojimo pavyzdžiai, sistemos aspektų aprašai.
+Laikui bėgant, modeliai evoliucionuoja. Konkretesni modeliai yra išvedami iš abstraktesnių. Laikui bėgant, pridedama vis daugiau ir daugiau detalių, atsiranda variantai. Be to, vartotojų turima sistemos samprata pamažu transformuojama į PS inžinierių turimą realizavimo lygmens sistemos sampratą.
+
+5. Kuo skiriasi programų sistemos modelio semantinis ir sintaksinis aspektai? Kas vadinama modelio vizualizavimu (vizualine pateiktimi)? (2 #41–42)
+Semantinis modelio aspektas aprašo PS kaip loginių konstrukcijų (klasių, asociacijų, būsenų, pranešimų, užduočių) tinklą.
+Semantinė informacija užrašoma tam tikra notacija, t.y. ji vaizduojama kaip tam tikra sintaksinė struktūra, kuri privalo tenkinti taisykles, nusakančias, kokie modeliai yra sintaksiškai teisingi. Taip pat yra taisyklės nusakančios modelio vykdymą. Tai sudaro sintaksinį modelio aspektą.
+Vizualizuojant modelį, semantinė informacija pateikiama pavidalu, pritaikytu jos peržiūrėjimui ir redagavimui.
+Vizualizuojant, modelis pateikiamas žmogui lengvai suprantama forma.
+Jokia papildoma informacija nėra pridedama, tačiau esama informacija organizuojama kitaip, negu ji yra saugoma kompiuteryje (ten ji saugoma forma, patogia apdoroti tą informaciją kompiuteriu). Vizualizuojant modelį, jo sintaksinis aspektas dažniausiai pakinta, t.y. ta pati semantinė informacija pateikiama kitu būdu, pavaizduojama kitoje notacijoje. Tinkamai parinkta notacija palengvina modelio supratimą.
+
+6. Kas tai yra UML™ kalba ir kam ji naudojama? (2 #45)
+Unified Modeling Language™ (UML) – tai standartinė grafinė kalba, pritaikyta specifikuoti, vizualizuoti, projektuoti, konstruoti ir dokumentuoti artefaktus, sukuriamus, kuriant ne tik programų, bet ir verslo bei kitokio pobūdžio sistemas.
+Ši kalba grindžiama objektine paradigma ir yra esminė patikimų ir lengvai prižiūrimų PS kūrimo priemonė.
+
+7. Išvardinkite UML™ diagramas ir trumpai apibūdinkite kiekvienos diagramos paskirtį. (4 #52–67)
+* Elgsenos diagramos
+** Užduočių diagramos (parodo sistemos išorėje esančius sistemos naudotojus ir jų sąryšius su sistemos vykdomomis užduotimis)
+** Sąveikos diagramos
+*** Sekų diagrama (nuosekliai parodo, kaip objektai, keisdamiesi pranešimais, įgyvendina užduotį)
+*** Komunikavimo diagrama (parodo sąveikoje dalyvaujančių objektų struktūrą, vaidmenis, atsakomybes ir ryšius)
+*** Sąveikos apžvalgos diagrama (susieja sąveikos fragmentus su aukšto lygmens darbų srautais)
+*** Chronometražo diagrama (aprašo laiko ribojimus modeliuojant realiame laike veikiančias sistemas)
+* Statinės struktūros diagramos
+** Klasių diagrama (aprašo statinę sistemos struktūrą)
+** Objektų diagrama (tai atskiras klasių diagramos atvejis. Vietoje klasių joje vaizduojami tų klasių objektai)
+** Paketų diagrama (parodo sistemos vidinę organizaciją)
+* Dinaminio modeliavimo diagramos
+** Būsenų diagrama (papildo klasių diagramą, parodydama visas galimas klasės būsenas ir jų pokyčius iššaukiančius išorinius įvykius)
+** Veiklos diagrama (aprašo veiksmų srautus, svarbiausiai – procesų darbų srautus)
+* Realizavimo diagramos
+** Komponentų diagrama (aprašo fizinę sistemos struktūrą)
+** Išdėstymo diagrama (aprašo fizinę sistemos architektūrą)
+* kitos, kurse nenagrinėjamos
+
+8. Kokiems tikslams naudojamos UML™ diagramos kuriant programų sistemas? (2 #68)
+* Koncepciniam modeliavimui
+** Dalykinės srities sąvokų aprašymui
+** Realaus pasaulio sistemų aprašymui
+* Kuriamoms sistemoms specifikuoti, jas projektuoti koncepciniu ir architektūriniu lygmenimis
+* Kuriamoms sistemoms realizuoti: projektuoti eskiziniu ir detaliuoju lygmenimis
+
+9. Išvardinkite užduočių diagramos elementus ir paaiškinkite, kaip jie vaizduojami. (5 #80–81)
+* Sistema
+* Užduotys
+** užduotys
+** použduotys
+** plėtiniai
+** išplėtimo taškai
+* Agentai
+* Ribojimai
+* Asociacijos
+** sąveika
+** apibendrinimas
+** pastabos ryšys
+* Priklausomybė
+** include
+** extend
+* Paketai
+* Pastabos
+* Tekstiniai paaiškinimai
+TODO: vaizdavimas
+
+10. Kokia užduočių diagramų paskirtis? (3 #82)
+Modeliuoti globalų (stambaus plano, išorinį) požiūrį į sistemą.
+
+11. Kaip reikia patikslinti užduočių diagramas, aprašant, kas vyksta vykdant užduotį? (2 #85)
+Tekstiniu aprašymu, elgsenos diagramomis.
+
+12. Koks sistemos aspektas aprašomas užduočių diagramomis? (1 #96)
+Užduočių diagrama aprašo modeliuojamos sistemos funkcionalumą kaip diskrečių užduočių (pvz. verslo transakcijų) rinkinį.
+
+13. Ką užduočių diagramose vaizduoja užduotis? (1 #86)
+Modeliuojamos sistemos naudotojų siekiamus tikslus.
+
+14. Kas užduočių diagramose gali būti vaizduojama kaip agentas? (1 #104)
+Bet kas, kas yra sistemos išorėje ir kartu su sistema dalyvauja užduoties vykdyme.
+
+15. Kokiems tikslams užduočių diagramose agentas naudoja užduotį? (1 #111) 
+Tam tikriems. FIXME: pernelyg įdomus atsakymas
+
+16. Kaip užduočių diagramose aprašomas agento vaidmuo sistemoje? (1 #111)
+Užduotimis, kuriomis jis gali pasinaudoti.
+
+17. Kokias asociacijų rūšis galima naudoti užduočių diagramose? (2 #80, #118, #126)
+* Sąveikos (komunikavimo) – jungia agentą su užduotimi
+* Apibendrinimas – neformalus būdas pavaizduoti, kad viena užduotis yra panaši į kitą, bet, funkcionalumo požiūriu, yra už ją šiek tiek bendresnė.
+* Pastabos ryšys – sieja pastabą su joje aprašomu modelio elementu
+
+18. Kas užduočių diagramose vaizduojama «include» ryšiu? (1 #122, #198)
+Vienos užduoties naudojimasis kita užduotimi kaip použduotimi.
+
+19. Kas užduočių diagramose vaizduojama «extend» ryšiu? Kas vadinama išplėtimo tašku? (3 #129–134, #198)
+Parodymas, jog viena užduotis praplečia kitą (yra použduotis, vykdoma esant tam tikroms sąlygoms).
+Bazinėje užduotyje aprašomas nurodymas, į kurią jos vietą ir kokioms sąlygoms esant turi būti įterptas plėtinys (išplečiančioji užduotis).
+
+20. Kas užduočių diagramose vaizduojama apibendrinimo ryšiu? (1 #126)
+Užduočių asociacija, kai viena užduotis yra panaši į kitą, bet, funkcionalumo požiūriu, yra už ją šiek tiek bendresnė.
+
+21. Išvardinkite sekų diagramos elementus ir paaiškinkite, kaip jie vaizduojami. (6 #201)
+* Vaidmenys
+** agentai
+** objektai
+* Pranešimai
+** sinchroniniai
+** asinchroniniai
+** konstruktoriai
+** destruktoriai
+** rekursyvūs
+** signalai
+** return
+* Gyvavimo aktarpos
+* Aktyvumo atkarpos
+* Išsišakojimai
+* Jungimosi taškai
+* Šakos
+* Valdymo gijos
+* Ribojimai
+** laiko
+* Paketai
+* Pastabos
+* Tekstiniai pranešimai
+TODO: vaizdavimas
+
+22. Kokia yra sekų diagramų paskirtis? (4 #212)
+Parodyti, kaip objektai, laiko tėkmėje keisdamiesi pranešimais, įgyvendina kuria nors užduotimi numatytą funkcionalumą.
+XXX: Jei už šitą klausimą 4 taškai, gal reikia kažko daugiau? Ko?
+
+23. Kas sekų diagramose vadinama gyvavimo atkarpa? (1 #215)
+Objektų vaidmenys užduotyje – pasyvaus (brūkšninė linija) ir aktyvaus (siauras stačiakampis) egzistavimo periodai.
+
+24. Kaip sekų diagramose yra modeliuojami objektai? (1 #216)
+Stačiakampyje nurodant objekto pavadinimą/klasę, vaidmenį, atributus, bei prie jo prijungiant gyvavimo atkarpą.
+
+25. Kas vadinama pranešimu? Kaip sekų diagramose yra modeliuojami pranešimai? Kokias pranešimų rūšis galima modeliuoti sekų diagramose? (3 #219–221)
+Pranešimas – reikalavimas vykdyti kokią nors operaciją. Pranešime nurodomi adresatas, selektorius ir argumentų sąrašas. Sekų diagramose jie išdėstomi iš viršaus žemyn ta tvarka, kuria jie yra siunčiami.
+* Sinchroninis (call tipo) pranešimas – toks, po kurio laukiama atsakymo ir vykdymas perduodamas adresatui;
+* Return pranešimas – atsakymui į gautą pranešimą perduoti;
+* Rekursyvus pranešimas – pats save kviečiantis pranešimas;
+* Asinchroninis pranešimas (signalas) – nestabdo jį pasiuntusio objekto darbo (nelaukia atsakymo);
+* Konstruktorius;
+* Destruktorius.
+
+26. Kaip sekų diagramose yra modeliuojami konstruktoriai ir destruktoriai? (2 #225, http://ptgmedia.pearsoncmg.com/images/chap4_0321193687/elementLinks/04fig03.gif)
+Konstruktorius modeliuojamas kaip pranešimas, tačiau rodyklė rodo ne į gyvavimo atkarpą, o į naują objektą aprašantį stačiakampį. Destruktorius vaizduojamas X-u nutraukiant gyvavimo atkarpą ir
+* nuo jo grąžinant return tipo pranešimą kūrėjui, jei objektas susinaikina pats;
+* į jį siunčiant pranešimą, jei objektą susinaikina kitas objektas;
+
+27. Kas sekų diagramose vadinama fragmentais ir kam jie naudojami? (2 #231–232)
+Inkapsuliuotos diagramos dalys. Naudojami alternatyvių (išsišakojančių) scenarijų, ciklų vaizdavimui, bendrai naudojamoms diagramoms.
+
+28. Kaip sekų diagramose yra modeliuojamas šakojimasis? Pateikite pavyzdį. (2 #233)
+Modeliuojamas fragmentu su specifikatoriumi „alt“. Fragmentas punktyrinėmis linijomis suskirstomas į tiek regionų, kiek yra alternatyvų, ir kiekviename regione nurodomos sąlygos, prie kurių yra vykdoma jame aprašyta scenarijaus dalis.
+
+29. Kaip sekų diagramose yra modeliuojami ciklai? Pateikite pavyzdį. (2 #235)
+Modeliuojami fragmentais su specifikatoriumi „loop“. Skliausteliuose nurodoma ciklo baigties sąlyga arba ciklo kartojimų skaičius.
+
+30. Kas sekų diagramose vadinama bendro naudojimo fragmentais? Pateikite pavyzdį. (2 #237)
+Tai atskiroje diagramoje aprašomas fragmentas, kurį galima panaudoti kitose diagramose įterpiant fragmentą su specifikatoriumi „ref“, ir jo viduje nurodant operacijos pavadinimą su atitinkamais faktiniais parametrais.
+
+31. Kas sekų diagramose vadinama objektų dekompozicija ir kaip ji modeliuojama? Pateikite pavyzdį. (2 #241–242)
+Sekų diagramose vaizduojami objektai gali turėti sudėtingą struktūrą (pvz., gali būti komponentas), kurios funkcionalumas aprašomas atskiroje sekų diagramoje. Tokiu atveju objekto pavadinime po klasės pavadinimo rašomas žodelis „ref“ ir šio objekto veikimą aprašančios diagramos pavadinimas.
+Pavyzdys: Tegul turime Purchase Item sekų diagramą, kurioje vienas iš dalyvių vykdo kreditinių kortelių autorizavimą. Autorizavimo proceso detalės paprastai nedomina Purchase Item skaitytojų, bet jos būtinos tiems, kas projektuoja ir kuria kortelių autorizavimo posistemį. Todėl šią diagramą tikslinga rengti kaip atskirą diagramą, darant į ją nuorodą pagrindinėje Purchase Item diagramoje.
+
+32. Kaip sekų diagramose modeliuojami sąveikos su išore taškai (gates)? Pateikite pavyzdį. (3 #245)
+Sąveikos su išore taškai diagramoje vaizduojami kaip pranešimų apsikeitimas su diagramos išore. Aprašant diagramą, aprašomi formalieji sąveikos taškai, darant nuorodą į diagramą – nurodami faktiniai (aktualieji) sąveikos taškai.
+
+33. Kas vadinama ansambliu? (1 #255)
+Ansamblio dalyvių ir tik jo kontekste turinčių aiškiai apibrėžtą prasmę jų siejančių sąryšių visuma.
+XXX: Nesąmonė? Skaidrėse apibrėžimai kažkokie nekonkretūs
+
+34. Išvardinkite komunikavimo diagramos elementus ir paaiškinkite kaip jie vaizduojami. (6 #250)
+* Vaidmenys
+** agentai
+** objektai
+** aktyvūs objektai
+** multiobjektai
+* Pranešimai
+* Sąryšiai
+* Reikalavimai
+* Paketai
+* Pastabos
+TODO: vaizdavimas
+
+35. Kokia yra komunikavimo diagramų paskirtis? (4 #251) 
+Modeliuoti sistemą loginiu arba išlygiagretinimo požiūriu, aprašyti objektų sąveikas ir jų tarpusavio sąryšius, 
+XXX: Jei už šitą klausimą 4 taškai, gal reikia kažko daugiau? Ko?
+
+36. Kas vadinama pranešimu? Kaip komunikavimo diagramose yra modeliuojami pranešimai? Kokias pranešimų rūšis galima modeliuoti komunikavimo diagramose? (3 #219, #256)
+Pranešimas – reikalavimas vykdyti kokią nors operaciją. Pranešime nurodomi adresatas, selektorius ir argumentų sąrašas.
+Komunikavimo diagramose pranešimai perduodami pagal sąryšius ir numeruojami jų perdavimo eilės tvarka.
+FIXME: pranešimų rūšys?
+
+37. Kaip ansambliuose yra modeliuojami konstruktoriai ir destruktoriai? (2 #257)
+Vykdymo metu sukuriamiems objektams nurodoma savybė {new}, sunaikinamiems – {destroyed}, sukuriamiems ir sunaikinamiems – {transient}.
+
+38. Kas vadinama multiobjektu? Kaip multiobjektai yra modeliuojami komunikavimo diagramose? (2 #261–262)
+Multiobjektai vaizduoja asociacijos „daugelis“ gale esančias objektų aibes. Jie naudojami parodyti operacijas, atliekamas ne su paskirais objektais, bet su visa objektų aibe. Multiobjektai vaizduojami kaip stačiakampių krūva.
+
+39. Kuo skiriasi aktyvieji ir pasyvieji objektai? Kaip modeliuojami aktyvieji objektai sekų diagramose ir kaip jie modeliuojami komunikavimo diagramose? (3 #263–264)
+Aktyviuoju vadinamas objektas, kuriam perduota valdymo gija ir kuris gali inicijuoti valdymo veiklas. Pasyviuoju vadinamas objektas, disponuojantis duomenimis, bet negalintis inicijuoti valdymo veiklų.
+Komunikavimo diagramose aktyvieji objektai vaizduojami paprastų objektų žymenimis, pastorinant jų linijas arba nurodant savybę {active}.
+FIXME: Sekų diagramose aktyvieji objektai tie, kurių gyvavimo atkarpose yra aktyvaus egzistavimo periodai?
+
+40. Kaip komunikavimo diagramomis yra aprašomi tipiniai projektavimo sprendimai? (3 #266)
+Tipinio projektavimo sprendimo pavadinimas įrašomas į punktyrinį stačiakampį ir su susijusiais elementais surišamas punktyrinėmis linijomis.
+XXX: patikrinti ir suprasti
+
+41. Išvardinkite klasių diagramos elementus ir paaiškinkite kaip jie vaizduojami. (7 #269)
+* Klasės
+* Objektai
+* Interfeisai
+* Lizdai
+* Metaklasės
+* Abstrakčios klasės
+* Šablonai
+* Utilitos
+* Paketai
+* Asociacijos
+** apibendrinimas
+** klasifikavimas
+** kompozicija
+** agregavimas
+* Priklausomybės
+** abstrakcija
+* Pastabos
+* Ribojimai
+TODO: vaizdavimas
+
+42. Kokia yra klasių diagramų paskirtis? (4 #271)
+Sistemos modeliavimui loginiu požiūriu. Jos parodo klases, jų vidinę struktūrą ir tarpusavio sąryšius.
+XXX: Jei už šitą klausimą 4 taškai, gal reikia kažko daugiau? Ko?
+
+43. Kas vadinama klase? Kas vadinama atributu? Kas vadinama operacija? Kaip klasių diagramose modeliuojamos klasės? (4 #281–285, #306)
+Klasė – tai tokią pačią struktūrą, tokią pačią elgseną, tuos pačius sąryšius ir tą pačią semantiką turinčių objektų rinkinys. Klasė – tai modelio konstrukcija, kuria modeliuojama atitinkama dalykinės srities esybė.
+Atributas – klasės struktūrinė savybė informacijos saugojimui. Operacija – klasės dinaminė savybė (jos elgsena), procesai informacijos apdorojimui.
+Klasė klasių diagramose vaizduojama stačiakampiu, sudarytu iš trijų (pavadinimo, atributų ir operacijų) sekcijų.
+
+44. Kaip nustatyti, kokios klasės turi būti modeliuojamos klasių diagrama? (2 #457)
+Nagrinėjant sekų diagramas – kokie yra agentai, kokiais objektais jie manipuliuoja.
+
+45. Kaip nustatyti, kokius atributus turi turėti modeliuojama klasė? (2 #459)
+Atributai nustatomi nagrinėjant pranešimų parametrus ir „prieš“ bei „po“ sąlygas sekų diagramose.
+
+46. Kaip nustatyti, kokias operacijas turi turėti modeliuojama klasė? (2 #458)
+Operacijos atitinka sekų diagramose siunčiamus pranešimus.
+
+47. Kaip nurodomas klasės elementų matomumas? Kokios yra klasės elementų matomumo rūšys? (2 #290–292)
+Nurodomas simboliu prieš elemento pavadinimą.
+* „public“ – matoma klasės išorėje, gali naudoti bet kas
+* „private“ – matoma tik klasės viduje, galima naudoti tik tos pačios klasės viduje
+* „protected“ – matoma išvestinėse klasėse
+* „package“ – matoma pakete
+
+48. Kas vadinama statiniais nariais? Kaip jie modeliuojami klasių diagramose? (2 #301)
+Statiniai nariai – pačios klasės (o ne jos objektų) savybės. Klasės apraše jie yra pabraukiami.
+
+49. Kas vadinama parametrizuotomis klasėmis (šablonais)? Kam jų reikia? Kaip jos modeliuojamos klasių diagramose? (4 #317–320)
+Šablonai – objektų rinkiniai, kuriems nepriskirtas konkretus tipas. Jie naudingi kelioms vienodos struktūros tačiau su skirtingais duomenų tipais dirbančioms klasėms aprašyti.
+Klasių diagramose modeliuojami kaip klasės, ant jų pavadinimo sekcijos viršutinio dešinio kampo punktyriniame stačiakampyjenurodant parametrizuojamo tipo pavadinimą ir jį naudojant atributų ir/ar operacijų sekcijose. Klasės apibrėžimas pagal šabloną įvykdomas nurodant punktyrinę paveldėjimo rodyklę su stereotipu <<bind>> ir prie jo nurodant, kokiu tipu keičiamas šablono parametras (<T->Tipas>), arba vietoj klasės pavadinimo nurodant šablono pavadinimą ir naudojamus tipus (Šablonas<T->Tipas>).
+
+50. Kuo skiriasi klasė ir tipas? (3 #321–328) primityvūs tipai, struktūriniai tipai, 
+Tipą sudaro jo panaudojimo protokolas, operacijų rinkinys. Klasės realizuoja tipus.
+Primityvieji duomenų tipai nėra klasės – jų leistinas reikšmes ir operacijas numato programavimo kalba.
+Struktūriniai duomenų tipai nuo primityviųjų skiriasi tuo, kad turi atributus ir operacijas.
+
+51. Kokios klasės vadinamos abstrakčiomis? Kam jų reikia? Kaip jos modeliuojamos klasių diagramose? (3 #313–314)
+Abstrakčioji klasė – tai tokia klasė, kuri turi tik signatūrą (t.y. aprašą), bet neturi (pilnos) realizacijos.
+Modeliuojamos kaip ir įprastos klasės, tačiau jų pavadinimai rašomi kursyvu arba nurodoma {abstract} savybė.
+
+52. Kas vadinama asociacijomis? Kam jų reikia? Kaip jos modeliuojamos klasių diagramose? (4 #333–351, #369)
+Asociacija – klases siejančio nuolatinio ryšio nurodymas. Jų reikia ryšiams tarp klasių žymėti.
+Asociacijos modeliuojamos klases sujungiant rodyklėmis, jungiančiomis vaidmenis. Kiekvienas vaidmuo turi pavadinimą (rašomas asociacijos galuose), kardinalumą (nurodo galimą susietų elementų kiekį), navigavimo kryptį (rodyklė vedama iš tos klasės, kuri yra atsakinga už ryšio tarp jų palaikymą) ir tipą (asociacija, kompozicija arba agregavimas).
+
+53. Kuo skiriasi agregavimas ir kompozicija? Kokia šių asociacijų paskirtis? Kaip jos modeliuojamos klasių diagramose? (4 #333, #369–377) reifikuotos klasės
+Agregavimas ir kompozicija naudojami parodyti, kad viena klasė yra kitos klasės dalis. Agregavimas – dalies sąryšis (vienai klasei priklauso objektai, susidedantys iš kitai klasei priklausančių objektų), modeliuojamas asociacijos gale, žyminčiame visumą, nupiešiant rombą. Kompozicija – agregavimo rūšis, susiejanti agregatą ir jo dalis visam jų gyvavimo laikui.
+Skiriasi tuo, jog objektas vienu metu gali priklausyti tik vienai kompozicijai, bei žymint kompoziciją rombas užspalvinamas. Tuo tarpu agregatuose tas pats objektas gali priklausyti keliems agregatams. Sunaikinus agregatą, dalis gali išlikti, o naikinant kompoziciją, sunaikinamos ir visos jos dalys.
+
+54. Kas vadinama kvalifikuotomis asociacijomis? Kokia šių asociacija paskirtis? Kaip jos modeliuojamos klasių diagramose? (4 #362–365)
+Kvalifikuota asociacija – tai binarinė asociacija, bent viename savo gale turinti atributų sekciją (kvalifikatorių). Naudojama objektų susiejimui pagal tam tikrus laukus. Modeliuojama asociacijos rodyklės pradžioje nupaišant stačiakampį ir jame surašant atributus (kvalifikatorius), kuriuos galima panaudoti kaip indeksus pereinant iš _kvalifikuotos klasės_ į _tikslinę klasę_, esančią kitame asociacijos gale.
+
+55. Kas vadinama asociacijos klase? Kokia tokių klasių paskirtis? Kaip jos modeliuojamos klasių diagramose? (4 #353–356) daugiavietės asociacijos
+Tai asociacija, kuri tuo pat metu yra ir klasė. Paprastai jų prisireikia tuomet, kuomet tarp dviejų klasių yra asociacija daugelis-su-daugeliu ir kiekvienas asociacijos egzempliorius (sąryšis) turi savas atributų reikšmes.
+Asociacijos klasės modeliuojamos modeliuojant atitinkamą klasę, ir ją punktyrine linija prijungiant prie klases jungiančios asociacijos linijos.
+
+56. Paaiškinkite kuo skiriasi asociacijos ir operacijos. (3 #369)
+Asociacijos modeliuoja nuolat tarp objektų egzistuojančius sąryšius, o operacijos sąryšius tarp objektų kuria ir naikina dinamiškai.
+
+57. Kas vadinama apibendrinimo ryšiu? Kokiems tikslams naudojami tokie ryšiai? Kaip jie modeliuojami klasių diagramose? (4 #378–382)
+Klasę ir poklasį siejantis ryšys. Naudojamas tėvinės klasės savybių paveldėjimui. Modeliuojami nubrėžiant rodyklę į bendresnę klasę, kurios smaigalys yra trikampis.
+
+58. Kas vadinama priklausomybe? Kaip yra modeliuojamos priklausomybės klasių diagramose? (4 #391)
+Tai naudojimo ryšys, parodantis, kad kokio nors daikto specifikacijos pokyčiai padaro poveikį kitam, jį naudojančiam, daiktui. Vaizduojama iš naudotojo į naudojamąjį einančia brūkšnine rodykle.
+
+59. Išvardinkite priklausomybių rūšis ir paaiškinkite, kokiems tikslams naudojama kiekviena iš priklausomybių rūšių. (7 #395–399)
+* «trace»: skirtingų modelių elementų koncepcinė priklausomybė.
+* «refine»: priklausomybė tarp dviejų skirtingų to paties koncepto versijų, pavyzdžiui, apibrėžtų skirtinguose abstrakcijos lygmenyse ar skirtingose projekto stadijose.
+* «derive»: elementą ir iš jo išskaičiuotą (išvestą) elementą siejanti priklausomybė.
+* «uses»: teiginys, kad vieno elemento elgsena ar realizavimo būdas veikia kito elemento elgseną ar realizavimo būdą.
+** «call»: viena klasė kviečia kitos klasės operaciją.
+** «create»: teiginys, kad viena klasė kuria kitos klasės egzempliorius.
+** «import»: leidimas paketui prieiti prie kito paketo turinio ir pridėti to paketo vardų aliasus į savo vardų erdvę.
+** «instantiate»: vienos klasės metodas kuria kitos klasės objektus.
+** «responsibility»: teiginys, kad viena elementas kuo nors įsipareigoja kitam elementui.
+* «permit»: leidimas vienam paketui prieiti prie kito paketo turinio.
+** «friend»: leidimas elementui prieiti prie kito elemento, nepriklausomai nuo jo matomumo, turinio.
+* «binding»: reikšmių priskyrimas parametrams.
+* «send»: signalo siuntėją ir jo gavėją siejanti priklausomybė.
+* «instance of»: parodo, kad vienas elementas yra kito elemento egzempliorius.
+
+60. Kokiems tikslams yra naudojamos realizavimo priklausomybės? Kaip jos modeliuojamos? (4 #400–401)
+Realizavimo priklausomybė naudojama nurodyti, kad viena klasė užduoda specifikaciją, kurią kita įgyvendina. Žymima į specifikaciją nukreipta punktyrine rodykle su trikampiu smaigalyje.
+
+61. Kaip UML™ kalboje yra suprantami interfeisai? Kam jie reikalingi? Kaip jie modeliuojami? (4 #404–411) lizdai (#417–436)
+Interfeisas – tai objekto elgsenos aprašas, pateikiamas atskirai nuo to objekto realizacijos ar būsenos. Pavyzdžiui, interfeisą galima naudoti prieigai prie skirtingos struktūros agregatų elementų, neatskleidžiant pačių agregatų struktūros.
+Interfeisai modeliuojami kaip klasės, neturinčios atributų ir turinčios tik „public“ metodus. Iš interfeisą realicuojančios klasės į interfeisą piešiama punktyrinė rodyklė su trikampiu smaigalyje, arba paprasta linija, jei interfeisas žymimas apskritimu.
+Lizdai – jungties taškai, turintys pavadinimus ir tiksliai apibrėžtus interfeisus.
+
+62. Paaiškinkite, kuo skiriasi asociacijos ir priklausomybės. (3 #391)
+Priklausomybės ryšys yra silpnesnis: jame objektams nėra būtina žinoti vienam apie kitą, jie nėra vienas kito dalis, tačiau gali būti perduodami, kaip operacijų argumentai.
+
+63. Kas UML™ kalboje yra vadinama utilitomis? Kam jų reikia? Kaip jos modeliuojamos klasių diagramose? (3 #443–445)
+Utilita yra globaliųjų kintamųjų ir procedūrų grupavimo priemonė. Naudojama patogumo dėlei, norint surinkti į vieną vietą tai pačiai bibliotekai priklausančias funkcijas. Modeliuojama kaip klasė, jos žymenyje nurodant rūšį «utility». Atributai ir operacijos neišreikštinai globalūs ir statiniai (prie jų matomumo specifikatoriai nenurodomi bei jie nepabraukiami).
+
+64. Kas UML™ kalboje yra vadinama metaklasėmis? Kam jų reikia? Kaip jos modeliuojamos klasių diagramose? (3 #446)
+Metaklasės – tai tokios klasės, kurių realizacijomis yra ne objektai, bet klasės.
+Naudojamos, kai reikia su klasėmis dirbti kaip su objektais. FIXME: Ar tikrai? Kam visgi naudojamos?
+Metaklasės žymimos klasės žymeniu, nurodant rūšį «metaclass».
+
+65. Kas UML™ kalboje yra vadinama objektu? Kam jie naudojami? Kaip jie modeliuojami? (3 #450–451)
+Naudojami modeliuoti struktūrinius sistemų aspektus realizacijos lygmeniu. Objektai aprašomi nurodant jų atributų reikšmes ir tas reikšmes (t. y. objekto būseną) keičiančių operacijų signatūras. Objektai gali būti susieti struktūriniais sąryšiais, apibendrinimo asociacijomis bei silpno arba stipraus agregavimo sąryšiais. Objektų rinkiniai (t.y. sąryšiais susieti objektai) gali būti ribojami papildomais darnos ribojimais.
+
+66. Paaiškinkite, kuo skiriasi klasių ir objektų diagramos. (3 #450)
+Klasių diagramose sistemos struktūra modeliuojama tipų lygmeniu, objektų diagramose – realizacijos lygmeniu.
+
+67. Kas vadinama sudėtiniu objektu? Kam reikalingi tokie objektai? Kaip jie modeliuojami? (3 #454)
+Sudėtiniai objektai – tai objektai, sudaryti iš tampriai tarpusavyje susietų vidinių dalių.
+Tokie objektai yra sudėtinių klasių realizacijos.
+Jie vaizduojami kaip statiniai modeliai ir modeliuojami panaudojant kompozicijas.
+
+68. Išvardinkite būsenų diagramos elementus ir paaiškinkite kaip jie vaizduojami. (6 465)
+69. Kokia yra būsenų diagramų paskirtis? (4 59)
+70. Kas vadinama būsena? Kaip nustatyti, kokias būsenas turi objektas? Kaip modeliuojamos būsenos? (6 480, 488)
+71. Paaiškinkite, kas vadinama perėjimu, perėjimo sąlyga ir perėjimo veiksmu. ++++(4 481)
+72. Kas vadinama sudėtiniu perėjimu? Kokia tokių perėjimų paskirtis? Kaip jie modeliuojami būsenų diagramose? (5 533)
+73. Kas vadinama nukirstuoju perėjimu? Kokia tokių perėjimų paskirtis? Kaip jie modeliuojami būsenų diagramose? (5 539)
+74. Kas vadinama vidiniu perėjimu? Kokia tokių perėjimų paskirtis? Kaip jie modeliuojami būsenų diagramose? (5 544)
+75. Kas vadinama sudėtine (įdėtine) būsena? Kokia tokių perėjimų paskirtis? Kaip jos modeliuojamos būsenų diagramose? (6)
+76. Kas vadinama įvykiu? Kokiems tikslams jie naudojami modeliuose? Kaip jie modeliuojami būsenų diagramose? (6)
+77. Kaip būsenų diagramose yra modeliuojamas šakojimasis? (2)
+78. Kas vadinama būsenos istorijos indikatoriumi? Kam jų reikia? Kaip jie modeliuojami būsenų diagramose? (4)
+79. Kaip būsenų diagramose yra modeliuojami konstruktoriai ir destruktoriai? (4)
+80. Išvardinkite veiklos diagramos elementus ir paaiškinkite kaip jie vaizduojami. (5)
+81. Kokia yra veiklos diagramų paskirtis? (4)
+82. Kas vadinama veiksmo būsena? Kokiems tikslams naudojamos tokios būsenos? Kaip jos modeliuojamos veiklos diagramose? (3)
+83. Kam veiklos diagramose yra reikalingi sprendimų priėmimai ir kaip jie yra modeliuojami? (3)
+84. Kaip veiklos diagramose yra modeliuojamas iššakojimas? (2)
+85. Kas vadinama atsakomybės juostomis? Kokia jų paskirtis? Kaip jos modeliuojamos veiklos diagramose? (3)
+86. Kas tai yra veiksmų ir objektų srautai? Kaip jie modeliuojami veiklos diagramose? (4)
+87. Kas tai yra Įvykių inicijuojami veiksmai? Kokiems tikslams jų reikia? Kaip jie naudojamos veiklos diagramose? (6)
+88. Išvardinkite komponentų diagramos elementus ir paaiškinkite kaip jie vaizduojami. (5)
+89. Kokia yra komponentų diagramų paskirtis? (4)
+90. Kas vadinama komponentu? Kaip komponentų diagramose yra modeliuojami komponentai? (4)
+91. Kuo skiriasi komponentų modeliavimas komponentų ir išdėstymo diagramose. Delegavimo ir išdėstymo jungtys. (4)
+92. Kas vadinama sistemos išdėstymo mazgu? Kaip komponentų diagramose yra modeliuojami tokie mazgai? (4)
+93. Kuo skiriasi sistemos išdėstymo mazgų modeliavimas komponentų ir išdėstymo diagramose? (4)
+94. Paaiškinkite kuo skiriasi komponentai ir paketai. (4) 
+95. Paaiškinkite kuo skiriasi komponentai ir klasės. (4)
+96. Išvardinkite išdėstymo diagramos elementus ir paaiškinkite kaip jie vaizduojami. (5)
+97. Kokia yra išdėstymo diagramų paskirtis? (4)
+98. Kas vadinama komponentu? Kaip komponentai yra modeliuojami išdėstymo diagramose? (4)
+99. Kas vadinama sistemos išdėstymo mazgu? Kaip sistemos išdėstymo mazgai yra modeliuojami išdėstymo diagramose? (4)
+100. Kas vadinama sistemos išdėstymo mazgų jungtimi (komunikavimo maršrutais)? Kaip tokios jungtys yra modeliuojamos UML™ kalbos priemonėmis? (4) artefaktai, išdėstymo specifikacijos, įrenginiai, vykdymo aplinkos, komponentų migravimas.
+101. Išvardinkite paketų diagramos elementus ir paaiškinkite kaip jie vaizduojami. (3)
+102. Kokia yra paketų diagramų paskirtis? (4)
+103. Kas UML™ kalboje yra vadinama paketu---? Kam naudojami paketai? Kaip jie vaizduojami UML™? (3)
+104. Kaip aprašomas paketo elementų matomumas paketo išorėje? Kokios yra matomumo rūšys? (2) 
+105. Kas vadinama paketo prieigos maršrutu? Kokiems tikslams ir kaip yra naudojami prieigos maršrutai? (2)
+106. Kas UML™ kalboje yra vadinama pastaba? Kokiems tikslams yra naudojamos pastabos? (2)
+107. Kokiems tikslams UML™ yra naudojami ribojimai? Kaip užrašomi ribojimai? Kas tai yra OCL? (4)
+108. Kas UML™ yra vadinama konstrukcijos rūšimi? Kam UML™ reikalingos konstrukcijų rūšys? (2) 
+109. Kokiems tikslams UML™ yra naudojami savybių sąrašai? Kas vadinama žyme? žymėtąja reikšme? (3)
