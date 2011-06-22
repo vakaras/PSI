@@ -231,7 +231,7 @@ Komunikavimo diagramose aktyvieji objektai vaizduojami paprastų objektų žymen
 FIXME: Sekų diagramose aktyvieji objektai tie, kurių gyvavimo atkarpose yra aktyvaus egzistavimo periodai?
 
 40. Kaip komunikavimo diagramomis yra aprašomi tipiniai projektavimo sprendimai? (3 #266)
-Tipinio projektavimo sprendimo pavadinimas įrašomas į punktyrinį stačiakampį ir su susijusiais elementais surišamas punktyrinėmis linijomis.
+Tipinio projektavimo sprendimai aprašomi subansambliais: pavadinimas įrašomas į punktyrinį apskritimą ir su susijusiais elementais surišamas punktyrinėmis linijomis.
 XXX: patikrinti ir suprasti
 
 41. Išvardinkite klasių diagramos elementus ir paaiškinkite kaip jie vaizduojami. (7 #269)
@@ -401,8 +401,8 @@ Jie vaizduojami kaip statiniai modeliai ir modeliuojami panaudojant kompozicijas
 ** sinchronizacija
 TODO: vaizdavimas
 
-69. Kokia yra būsenų diagramų paskirtis? (4 #59, #479)
-Būsenų diagrama papildo klasių diagramą, parodydama visas galimas tos klasės būsenas, jų pokyčius iššaukiančius išorinius įvykius bei veiksmus, atliekamus keičiant būsenas.
+69. Kokia yra būsenų diagramų paskirtis? (4 #59, #479, #548)
+Būsenų diagrama papildo klasių diagramą, parodydama visas galimas tos klasės būsenas, jų pokyčius iššaukiančius išorinius įvykius bei veiksmus, atliekamus keičiant būsenas. Naudojama kryžminiam sekų diagramos tikrinimui, operacijų trigeriams/parametrams/ribojimams nustatyti bei sistemos interfeisui projektuoti.
 
 70. Kas vadinama būsena? Kaip nustatyti, kokias būsenas turi objektas? Kaip modeliuojamos būsenos? (6 #480, #488–492, #498)
 Būsena: Objekto „nuotrauka“ (jo atributų reikšmių visuma) kokiu nors to objekto gyvavimo laikotarpiui priklausančiu laiko momentu.
@@ -414,9 +414,17 @@ Pereiga vaizduoja dvi objekto būsenas siejantį sąryšį. Pagal šį sąryšį
 Perėjimo sąlyga (transition guard) aprašo, kokia sąlyga turi būti patenkinta, kad šia sąlyga apsaugota pereiga įvyktų perėjimas.
 Perėjimo veiksmas (transition action) – tai nepertraukiama operacija, vykstanti perėjimo metu.
 
-72. Kas vadinama sudėtiniu perėjimu? Kokia tokių perėjimų paskirtis? Kaip jie modeliuojami būsenų diagramose? (5 533)
-73. Kas vadinama nukirstuoju perėjimu? Kokia tokių perėjimų paskirtis? Kaip jie modeliuojami būsenų diagramose? (5 539)
-74. Kas vadinama vidiniu perėjimu? Kokia tokių perėjimų paskirtis? Kaip jie modeliuojami būsenų diagramose? (5 544)
+72. Kas vadinama sudėtiniu perėjimu? Kokia tokių perėjimų paskirtis? Kaip jie modeliuojami būsenų diagramose? (5 #533–534)
+Tai toks perėjimas, kuris turi keletą pradinių ir/arba keletą tikslinių būsenų.
+Naudojamos valdymą išskaidyti į kelias gijas (nepanaudojant lygiagrečių būsenų) ir/arba tokioms gijoms sinchronizuoti.
+Modeliuojamos nubrėžiant siaurą užspalvintą stačiakampį, į vieną jo plačiąją pusę suvedant rodykles iš pradinių būsenų, o iš kitos pusės išvedant rodykles į tikslines būsenas.
+
+73. Kas vadinama nukirstuoju perėjimu? Kokia tokių perėjimų paskirtis? Kaip jie modeliuojami būsenų diagramose? (5 #539–540)
+Perėjimas į įdėtinę būseną arba iš jos, kai konkreti būsena nėra pradinė ar galinė ir yra žemesnio lygio, negu vaizduojamos toje diagramoje. Nukirstinės būsenos įgalina diagramą vaizduoti mažesniu detalumu. Nuokirtos vaizduojamos mažu vertikaliu brūkšneliu, apimančiosios būsenos viduje.
+
+74. Kas vadinama vidiniu perėjimu? Kokia tokių perėjimų paskirtis? Kaip jie modeliuojami būsenų diagramose? (5 #544, #489)
+Tai toks perėjimas, kuriam suveikus liekama toje pačioje būsenoje. Naudojami įvykiams, kuriems įvykus būsena nepakinta, modeliuoti. Aprašomi būsenos vidinių perėjimų sekcijoje formatu: įvykio_pavadinimas argumentų_sąrašas [sąlyga] / veiksmo išraiška.
+
 75. Kas vadinama sudėtine (įdėtine) būsena? Kokia tokių perėjimų paskirtis? Kaip jos modeliuojamos būsenų diagramose? (6 #504–511)
 Sudėtinės būsenos dekomponuojamos į _„ir“ būsenas_ (tarsi vidinės būsenų diagramos) arba _„arba“ būsenas_ (alternatyvios būsenos, atskirtos punktyrinėmis linijomis). Kelių būsenų sudėjimas į vieną leidžia jas vaizduoti skirtingais abstrakcijos lygmenimis bei dekomponuoti į kelias nuoseklias ar lygiagrečias būsenas.
 Kokių tokių perėjimų? XXX: kreivas klausimas
@@ -426,36 +434,182 @@ Kokių tokių perėjimų? XXX: kreivas klausimas
 Naudojami objektų perėjimui į kitas būsenas kontroliuoti.
 Modeliuojami rodykle nurodant, iš kurios būsenos į kurią pereinama, ir prie jos užrašant perėjimo eilutę (įvykio pavadinimas(parametras, ...) [perėjimo sąlyga] / veiksmo reiškinys ^ _send_ sakinys).
 
-77. Kaip būsenų diagramose yra modeliuojamas šakojimasis? (2)
-78. Kas vadinama būsenos istorijos indikatoriumi? Kam jų reikia? Kaip jie modeliuojami būsenų diagramose? (4)
-79. Kaip būsenų diagramose yra modeliuojami konstruktoriai ir destruktoriai? (4)
-80. Išvardinkite veiklos diagramos elementus ir paaiškinkite kaip jie vaizduojami. (5)
-81. Kokia yra veiklos diagramų paskirtis? (4)
-82. Kas vadinama veiksmo būsena? Kokiems tikslams naudojamos tokios būsenos? Kaip jos modeliuojamos veiklos diagramose? (3)
-83. Kam veiklos diagramose yra reikalingi sprendimų priėmimai ir kaip jie yra modeliuojami? (3)
-84. Kaip veiklos diagramose yra modeliuojamas iššakojimas? (2)
-85. Kas vadinama atsakomybės juostomis? Kokia jų paskirtis? Kaip jos modeliuojamos veiklos diagramose? (3)
-86. Kas tai yra veiksmų ir objektų srautai? Kaip jie modeliuojami veiklos diagramose? (4)
-87. Kas tai yra Įvykių inicijuojami veiksmai? Kokiems tikslams jų reikia? Kaip jie naudojamos veiklos diagramose? (6)
-88. Išvardinkite komponentų diagramos elementus ir paaiškinkite kaip jie vaizduojami. (5)
-89. Kokia yra komponentų diagramų paskirtis? (4)
-90. Kas vadinama komponentu? Kaip komponentų diagramose yra modeliuojami komponentai? (4)
-91. Kuo skiriasi komponentų modeliavimas komponentų ir išdėstymo diagramose. Delegavimo ir išdėstymo jungtys. (4)
-92. Kas vadinama sistemos išdėstymo mazgu? Kaip komponentų diagramose yra modeliuojami tokie mazgai? (4)
-93. Kuo skiriasi sistemos išdėstymo mazgų modeliavimas komponentų ir išdėstymo diagramose? (4)
-94. Paaiškinkite kuo skiriasi komponentai ir paketai. (4) 
-95. Paaiškinkite kuo skiriasi komponentai ir klasės. (4)
-96. Išvardinkite išdėstymo diagramos elementus ir paaiškinkite kaip jie vaizduojami. (5)
-97. Kokia yra išdėstymo diagramų paskirtis? (4)
+77. Kaip būsenų diagramose yra modeliuojamas šakojimasis? (2 #532)
+Nubrėžiant rodyklę į rombą, ir iš jo kelias rodykles į skirtingas būsenas su atitinkamomis perėjimų sąlygomis.
+
+78. Kas vadinama būsenos istorijos indikatoriumi? Kam jų reikia? Kaip jie modeliuojami būsenų diagramose? (4 #535–538)
+Būsenos istorijos indikatorius – mažu apskritimu su raide „H“ viduje vaizduojamas būsenų diagramos elementas, naudojamas jo galiojimo srityje paskutinės objekto turėtos būsenos atkūrimui. Reikalingas norint atstatyti būseną po pertraukimo. Į indikatorių gali būti pereinama iš bet kurio būsenų skaičiaus, tačiau išeinama tik į vieną.
+Norint, kad indikatorius pervestų ne į to paties, o bet kurio lygmens būseną, naudojamas giluminis būsenos istorijos indikatorius, žymimas „H*“.
+
+79. Kaip būsenų diagramose yra modeliuojami konstruktoriai ir destruktoriai? (4 #543)
+Konstruktorių iškvietimai modeliuojami perėjimuose iš pradinės būsenos, destroktorių – perėjimuose į galines būsenas.
+
+80. Išvardinkite veiklos diagramos elementus ir paaiškinkite kaip jie vaizduojami. (5 #576–579)
+* Būsenos
+** pradinė
+** veiksmo
+** galinė
+* Šakojimas
+** nuoseklus šakojimas (sprendimo priėmimas)
+** iššakojimas
+** sujungimas
+** suliejimas
+* Atsakomybės juostos
+* Veiklos
+* Objektai
+** už veiksmą atsakingas objektas
+** objektų srautas
+** objekto būsena
+* Perėjimai
+* Paketai
+* Pastabos
+* Įvykių inicijuojami veiksmai
+** signalo siuntimas
+** signalo gavimas
+** atidėtas įvykis
+** laiko įvykis
+TODO: vaizdavimas
+
+81. Kokia yra veiklos diagramų paskirtis? (4 #580–581)
+Jos skirtos vykdomo logikai aprašyti: modeliuoti veiksmus (darbus ir veiklas, modeliuojamas vykdomomis veiklų viršūnėmis) ir jų rezultatus, modeliuojamus objektų būsenų pokyčiais.
+
+82. Kas vadinama veiksmo būsena? Kokiems tikslams naudojamos tokios būsenos? Kaip jos modeliuojamos veiklos diagramose? (3 #583–584, #612)
+Veiksmo būsena – stačiakampis užapvalintais galais, vaizduojantis tai, ką daro objektas, realizuodamas savo atsakomybę.
+
+83. Kam veiklos diagramose yra reikalingi sprendimų priėmimai ir kaip jie yra modeliuojami? (3 #623–)
+Sprendimų priėmimai reikalingi, kad galiojant skirtingoms sąlygoms būtų pereinama į atitinkamas veiklas. Modeliuojama prie perėjimus žyminčių strėlių laužtiniuose skliaustuose nurodant sąlygas, arba rombu, į kurįį įeina vienas ar keli lankai bei iš kurių išeina lankai su laužtiniuose skliaustuose nurodytomis nesikertančiomis sąlygomis.
+
+84. Kaip veiklos diagramose yra modeliuojamas iššakojimas? (2 #629)
+Nupiešiant pailgą užspalvintą stačiakampį, į kurio vieną ilgąją kraštinę įeina veiksmo lankas, o iš kito išeina keli lankai į lygiagrečiai vykdomus veiksmus.
+
+85. Kas vadinama atsakomybės juostomis? Kokia jų paskirtis? Kaip jos modeliuojamos veiklos diagramose? (3 #632–637)
+Atsakomybės juosta – tai tam tikra paketo rūšis, skirta organizuoti atsakomybes už veiklas klasės viduje. Ji nurodo, kas yra atsakingas už toje juostoje pavaizduotas veiksmo būsenas. Juostos viena nuo kitos skiriamos ištisinėmis vertikaliomis linijomis, viršuje pavaizduojant atsakingą agentą, arba jį įvardinant skliausteliuose būsenų žymenyse.
+
+86. Kas tai yra veiksmų ir objektų srautai? Kaip jie modeliuojami veiklos diagramose? (4 #590–598, #642)
+Veiksmų srautas nurodo veiksmų vykdymo eiliškumą. Modeliuojamas veiksmo būsenas jungiant strėlėmis.
+Objektų srautas parodo, kokie objektai yra perduodami veiksmo būsenai iš kitų veiksmo būsenų (veiksmo būsenos įeities duomenys) ir kokius objektus ši būsena, baigus ją vykdyti, perduoda kitoms veiksmo būsenoms (veiksmo būsenos išeities duomenys, t. y. rezultatai). Modeliuojami iš objektą siunčiančios veiksmo būsenos nubrėžiant punktyrinę strėlę į objektą bei iš objekto – į jį gaunančią būseną.
+Jei objektų srautas vienareikšmiškai nusako veiksmo viršūnių vykdymo tvarką, tai veiksmų srauto galima nerodyti.
+
+87. Kas tai yra Įvykių inicijuojami veiksmai? Kokiems tikslams jų reikia? Kaip jie naudojamos veiklos diagramose? (6 #646–652)
+Tai signalo gavimo ar siuntimo arba laiko inicijuojami veiksmai arba atidėti įvykiai. Naudojami išorinių įvykių poveikiui modeliuoti arba veiklomsms tam tikru laiko momentu startuoti.
+Signalo gavimas žymimas įgaubtuoju penkiakampiu, gautu sujungus stačiakampį ir trikampį. Signalo signatūra rašoma penkiakampio viduje. Signalo siuntimas – atitinkamai, tik iškiliuoju penkiakampiu.
+Laiko įvykiai vaizduojami dviem vienas į kitą smaigaliais nukreiptais trikampiais.
+Atidėti įvykiai nurodomi būsenos žymenyje, po įvykio dedamas dešininis brūkšnelis ir nurodoma speciali operacija _defer_. Jei atidėtas įvykis siejamas su veiksmo būsena ir jis įvyksta esant toje būsenoje, jis atidedamas iki veiksmo pabaigos ir tik tada jis iššaukia perėjimą.
+
+88. Išvardinkite komponentų diagramos elementus ir paaiškinkite kaip jie vaizduojami. (5 #659–669)
+* Komponentai
+* Klasės
+* Interfeisai
+* Lizdai
+* Jungtys
+* Artefaktai
+* Sistemos išdėstymo mazgai
+* Asociacijos
+* Priklausomybės
+** realizavimo
+** interfeiso realizavimo
+** naudojimo
+* Paketai
+* Pastabos
+* Ribojimai
+* Klasių diagramose naudojami žymėjimai
+TODO: vaizdavimas
+
+89. Kokia yra komponentų diagramų paskirtis? (4 #671)
+Komponentų diagrama aprašo fizinę sistemos struktūrą, t.y. iš kokių tipų komponentų (o ne konkrečių komponentų egzempliorių) yra sudaryta ta sistema.
+XXX: Jei už šitą klausimą 4 taškai, gal reikia kažko daugiau? Ko?
+
+90. Kas vadinama komponentu? Kaip komponentų diagramose yra modeliuojami komponentai? (4 #673–680, #686–690)
+UML požiūriu komponentas yra klasės specializacija, programuotojo požiūriu – vykdomo kodo blokas, teikiantis vieną ar daugiau paslaugų, kiekviena iš kurių per gerai apibrėžtą interfeisą pateikia tam tikrą funkcionalumą. Tai visiškai autonomiškas sistemos ar posistemio vienetas.
+Komponento žymuo yra toks pats, kaip ir klasės (stačiakampis), tiktai jam nurodoma klasės rūšis «component». Papildomai dešiniajame viršutiniame kampe gali būti nurodyta komponento piktograma !http://wc1.smartdraw.com/resources/tutorials/images/uml_component.gif(Komponentas)! . Vidiniai klasifikatoriai vaizduojami komponento žymens viduje arba išorėje, prie komponento prijungus kaip priklausomybes.
+
+91. Kuo skiriasi komponentų modeliavimas komponentų ir išdėstymo diagramose. Delegavimo ir išdėstymo jungtys. (4 #697–700)
+Delegavimo jungtis – jungtis, jungianti išorinius komponento įsipareigojimus (kontraktą), specifikuojamus jo lizdų, su tą elgseną realizuojančiomis vidinėmis komponento dalimis. Ši jungtis parodo signalų (reikalavimų vykdyti operacijas ir įvykių) perdavimą: lizdo gaunami signalai delegavimo jungtimis perduodami juos apdorojančioms vidinėms komponento dalims.
+Surinkimo jungtis – tai jungtis, jungianti vieną komponentą su kitu ir parodanti, kad vienas komponentas teikia kitam komponentui reikalingas paslaugas. Surinkimo jungtis jungia reikiamą interfeisą ar lizdą su teikiamu interfeisu ar lizdu. Surinkimo jungtis vaizduojama naudojant supaprastintą realizuojamų ir reikiamų interfeisų notaciją („rutuliukas ir įduba“).
+
+92. Kas vadinama sistemos išdėstymo mazgu? Kaip komponentų diagramose yra modeliuojami tokie mazgai? (4 #739, #725–728)
+Sistemos išdėstymo mazgas – kokią nors sistemos dalį vykdantis vienetas, paprastai, kompiuteris ar kokia nors kita techninė įranga.
+Komponentų diagramose stačiakampiu gretasieniu vaizduojami mazgų tipai, galintys savyje turėti komponentų tipus. Mazgai turi pavadinimą ir rūšį.
+
+93. Kuo skiriasi sistemos išdėstymo mazgų modeliavimas komponentų ir išdėstymo diagramose? (4 #725, #740, #743!)
+Išdėstymo diagrama parodo vykdymo metu veikiančios kompiuterinės sistemos konfigūraciją ir ten veikiančius programinius procesus, sistemos išdėstymą tinkle, fizinius PĮ ir TĮ sąryšius.
+Komponentų diagramose parodomi ne komponentų egzemplioriai, o tipai, vykdymo metu neegzistuojantys komponentai.
+
+94. Paaiškinkite kuo skiriasi komponentai ir paketai. (4 #722) 
+Paketai naudojami struktūrizuoti UML modelius, o komponentai – fizines sistemos dalis.
+XXX: Jei už šitą klausimą 4 taškai, gal reikia kažko daugiau? Ko?
+
+95. Paaiškinkite kuo skiriasi komponentai ir klasės. (4 #723–724)
+Komponentas yra specializuota klasė. Klasė yra loginė abstrakcija, o komponentas – fizinis daiktas, realiai egzistuojantis kompiuteryje.
+XXX: Jei už šitą klausimą 4 taškai, gal reikia kažko daugiau? Ko?
+
+96. Išvardinkite išdėstymo diagramos elementus ir paaiškinkite, kaip jie vaizduojami. (5 #735–736)
+* Sistemos išdėstymo mazgai
+* Komunikavimo maršrutai
+* Interfeisai
+* Priklausomybės
+** išdėstymo
+** manifestavimo
+* Apibendrinimo ryšiai
+* Paketai
+* Pastabos
+* Ribojimai
+* Asociacijos
+* Agentai
+TODO: vaizdavimas
+
+97. Kokia yra išdėstymo diagramų paskirtis? (4 #738)
+Išdėstymo diagramos parodo, kokiuose konkrečiuose kompiuterių tinklo mazguose išdėstyti vykdomųjų sistemos komponentų ir procesų egzemplioriai bei kiti sistemos vykdymo aplinkos elementai, įskaitant objektus. Išdėstymo diagrama parodo vykdomos sistemos konfigūraciją. Diagrama parodo, kaip fiziškai susieti aparatiniai ir programiniai sistemos komponentai.
+
 98. Kas vadinama komponentu? Kaip komponentai yra modeliuojami išdėstymo diagramose? (4)
-99. Kas vadinama sistemos išdėstymo mazgu? Kaip sistemos išdėstymo mazgai yra modeliuojami išdėstymo diagramose? (4)
-100. Kas vadinama sistemos išdėstymo mazgų jungtimi (komunikavimo maršrutais)? Kaip tokios jungtys yra modeliuojamos UML™ kalbos priemonėmis? (4) artefaktai, išdėstymo specifikacijos, įrenginiai, vykdymo aplinkos, komponentų migravimas.
-101. Išvardinkite paketų diagramos elementus ir paaiškinkite kaip jie vaizduojami. (3)
-102. Kokia yra paketų diagramų paskirtis? (4)
-103. Kas UML™ kalboje yra vadinama paketu---? Kam naudojami paketai? Kaip jie vaizduojami UML™? (3)
-104. Kaip aprašomas paketo elementų matomumas paketo išorėje? Kokios yra matomumo rūšys? (2) 
-105. Kas vadinama paketo prieigos maršrutu? Kokiems tikslams ir kaip yra naudojami prieigos maršrutai? (2)
-106. Kas UML™ kalboje yra vadinama pastaba? Kokiems tikslams yra naudojamos pastabos? (2)
-107. Kokiems tikslams UML™ yra naudojami ribojimai? Kaip užrašomi ribojimai? Kas tai yra OCL? (4)
-108. Kas UML™ yra vadinama konstrukcijos rūšimi? Kam UML™ reikalingos konstrukcijų rūšys? (2) 
-109. Kokiems tikslams UML™ yra naudojami savybių sąrašai? Kas vadinama žyme? žymėtąja reikšme? (3)
+UML požiūriu komponentas yra klasės specializacija, programuotojo požiūriu – vykdomo kodo blokas, teikiantis vieną ar daugiau paslaugų, kiekviena iš kurių per gerai apibrėžtą interfeisą pateikia tam tikrą funkcionalumą. Tai visiškai autonomiškas sistemos ar posistemio vienetas.
+Komponento žymuo yra toks pats, kaip ir klasės (stačiakampis), tiktai jam nurodoma klasės rūšis «component». Papildomai dešiniajame viršutiniame kampe gali būti nurodyta komponento piktograma !http://wc1.smartdraw.com/resources/tutorials/images/uml_component.gif(Komponentas)! .
+
+99. Kas vadinama sistemos išdėstymo mazgu? Kaip sistemos išdėstymo mazgai yra modeliuojami išdėstymo diagramose? (4 #739, #746, #751)
+Sistemos išdėstymo mazgas – kokią nors sistemos dalį vykdantis vienetas, paprastai, kompiuteris ar kokia nors kita techninė įranga.
+Mazgai šdėstymo diagramose vaizduojami užrašius jo tipą ant stačiakampio gretasienio. Vaizduojant egzempliorių, nurodomas ir jo pavadinimas, bei šie pavadinimai pabraukiami. Mazgai gali būti jungiami asociacijomis.
+
+100. Kas vadinama sistemos išdėstymo mazgų jungtimi (komunikavimo maršrutais)? Kaip tokios jungtys yra modeliuojamos UML™ kalbos priemonėmis? (4 #750–751) artefaktai, išdėstymo specifikacijos, įrenginiai, vykdymo aplinkos, komponentų migravimas.
+Komunikavimo maršrutas – tai asociacija, per kurią du mazgai gali keistis signalais ir pranešimais.
+Modeliuojamos linija sujungiant komponentus, galima nurodant asociacijos rūšį.
+XXX: Ką visgi reiškia tie žodžiai po klausimo? Jie irgi bus klausimuose?
+
+101. Išvardinkite paketų diagramos elementus ir paaiškinkite, kaip jie vaizduojami. (3 #782–784)
+* Paketai
+* Priklausomybės
+* Pastabos
+* Ribojimai
+TODO: vaizdavimas
+
+102. Kokia yra paketų diagramų paskirtis? (4 #781, #785)
+Aprašyti klasių grupavimą ir priklausomybes.
+Darant prielaidą, kad paketai bus realizuojami komponentais, paketų diagramos gali būti panaudotos modeliuoti objektinių sistemų fizinius aspektus.
+
+103. Kas UML™ kalboje yra vadinama paketu? Kam naudojami paketai? Kaip jie vaizduojami UML™? (3 #786–788)
+Paketas - tai UML modelio elementų grupavimo mechanizmas, kuriantis grupuojamiems elementams bendrą vardų erdvę.
+Naudojamas bet kokių modelio elementų grupavimui ir vardų galiojimo srities apibrėžimui.
+<pre>
+___
+|_|____
+|     |
+|_____|
+</pre>
+
+104. Kaip aprašomas paketo elementų matomumas paketo išorėje? Kokios yra matomumo rūšys? (2 #165)
+Prieš elementą nurodant matomumo žymenį: „+“ (_public_), „-“ (_private_) arba „#“ (_protected_).
+
+105. Kas vadinama paketo prieigos maršrutu? Kokiems tikslams ir kaip yra naudojami prieigos maršrutai? (2 #168)
+Prieigos kelias nusako, kaip, pradedant nuo sistemos šakninio paketo (arba nuo kurio nors kito taško) prieiti iki norimo modelio elemento. Prieigos kelią sudaro paketų pavadinimai, skiriami ženklu „::“.
+
+106. Kas UML™ kalboje yra vadinama pastaba? Kokiems tikslams yra naudojamos pastabos? (2 #173)
+Specialus grafinis žymuo (popieriaus lapas su užlenktu viršutiniu dešiniu kampu) su jame pateiktu tekstu. Naudojamas ribojimams, komentarams, metodų kūnams arba žymėtosioms reikšmėms aprašyti.
+
+107. Kokiems tikslams UML™ yra naudojami ribojimai? Kaip užrašomi ribojimai? Kas tai yra OCL? (4 #175)
+Ribojimai – taisyklės, aprašančios, ką galima, ir ko negalima daryti. Užrašomi {figūriniuose skliausteliuose} laisvos formos tekstu arba objektinių ribojimų aprašymo kalba (OCL – object constraints language).
+
+108. Kas UML™ yra vadinama konstrukcijos rūšimi? Kam UML™ reikalingos konstrukcijų rūšys? (2 #160) 
+Žodis, nusakantis konstrukcijos rūšį. Naudojamos atskirti skirtingas UML konstrukcijas, bei išvesti naujoms.
+
+109. Kokiems tikslams UML™ yra naudojami savybių sąrašai? Kas vadinama žyme? žymėtąja reikšme? (3 #164, #183)
+UML konstrukcijų savybėms įvardinti.
+Žymėtoji reikšmė – tai pora „pavadinimas=reikšmė“ (pavadinimas vadinamas žyme (_tag_)). Ją galima apibrėžti bet kuriai UML konstrukcijai.
