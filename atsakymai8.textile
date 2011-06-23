@@ -1,0 +1,61 @@
+1. Kas vadinama užduoties modeliu? (2 #5)
+Visų su sistema dirbančių agentų ir visų tų agentų vykdomų užduočių visuma.
+
+2. Kokį vaidmenį užduočių modeliuose vaidina pirminis agentas? Koks vaidmuo tenka antriniams agentams? Kas vadinama vidiniu agentu? Kaip visi tie agentai yra susieti tarpusavyje? (4 #8, #30, #34)
+Pirminis agentas inicijuoja sąveiką su sistema tam, kad pasiektų tam tikrus savo tikslus.
+Antrinis agentas – tai toks agentas, be kurio pagalbos sistema negali įvykdyti jos vykdomų užduočių.
+Vidiniu agentu vadinama nagrinėjama sistema ar jos dalis.
+Šiuos agentus sieja dalyvavimas vienos užduoties vykdyme.
+
+3. Kaip užduočių modeliuose suprantama agento atsakomybė? (3 #32, #34–35)
+Įsipareigojimas vykdyti priskirtą užduotį iki jos sėkmingos pabaigos.
+Tai agento aukščio lygmens elgsena – tai, kas formuluoja agento tikslus.
+
+4. Kas vadinama pirminio agento tikslu? (2 #38)
+Sistemos funkcija, kuria jis nori pasinaudoti.
+
+5. Kas užduočių modeliavime yra vadinama alternatyviaisiais veiksmais? (2 #39)
+Agento atsarginis būdas tikslui pasiekti, jei dėl kokių nors priežasčių to nepavyksta padaryti pagrindiniu būdu.
+
+6. Kas užduočių modeliavime yra vadinama sąveika? Kuo skiriasi sąveikų seka ir scenarijus? (3 #34)
+Sąveika – tai vieno agento tikslas, darantis nuorodą į kito (arba to paties) agento atsakomybę.
+
+7. Paaiškinkite, kas vadinama užduoties vykdymo sritimi. Kuo skiriasi strateginė ir sistemos vykdymo sritys? (3 #26–29)
+Vykdymo sritis – sistema arba jos dalis, susijusi su užduoties vykdymu. Strateginės srities sąvoka naudojama kalbant apie organizacijai svarbias užduotis verslo modeliavimo lygmenyje, o sistemos vykdymo sritis – apie programų sistemos vykdomas užduotis atliekant koncepcinį sistemos projektavimą.
+
+8. Paaiškinkite, kas vadinama užduočių modeliavimo hierarchija. (3 #45)
+Toks modelių (UML diagramų) tvarkymo būdas, kai hierarchijos viršuje esanti užduočių diagrama dekomponuojama į použduotis, joms aprašomi scenarijai, pavaizduoti sekų diagramomis. Tos použduotys, kurios nėra paprasti pranešimai, vėl gali būti dekomponuojamos ir aprašytos scenarijais. Iš apatinio lygmens gaunamos klasių ir būsenų diagramos.
+
+9. Kas užduočių modeliavime yra vadinama užduoties lygmeniu? Kuo skiriasi vartotojo tikslas, sumarinis tikslas ir subfunkcija? (3 #60–62)
+Užduoties lygmuo gali būti vartotojo ar sumarinis tikslas arba subfunkcija.
+Vartotojo tikslas – savo darbą atliekančio pirminio agento tikslas.
+Sumarinis tikslas – vartotojo tikslų rinkinys.
+Sunfunkcija – potikslis arba scenarijaus žingsnis, esantis už vartotojo tiesioginių interesų ribų.
+
+10. Kas užduočių modeliavime yra vadinama trigeriu, prioritetu, “prieš” sąlygomis, sėkmingos pabaigos ir nesėkmingos baigties sąlygomis. (4 #65)
+Trigeris – išorinis įvykis, inicijuojantis užduoties vykdymo pradžią.
+Prioritetas – užduoties svarba, lyginant ją su kitomis užduotimis.
+„Prieš“ sąlygos – sistemos ir galbūt agentų būsenos, kurioms esant galima pradėti vykdyti užduotį.
+Sėkmingos baigties sąlygos – sistemos ir galbūt agentų būsenos, baigus vykdyti užduotį.
+Nesėkmingos baigties sąlygos – sistemos ir galbūt agentų būsenos,  nepavykus įvykdyti užduotį.
+
+11. Kas užduočių modeliavime yra vadinama scenarijumi? Kas tai yra scenarijaus sprogimas? Kaip jo išvengti? (3 #69, #77, #98)
+Scenarijus – seka sąveikų, vykdomų tikslu pasiekti pirminio agento tikslą, vykstančių prie tam tikrų sąlygų ir duodančių rezultatus, priartinančius prie siekiamo tikslo.
+Scenarijaus sprogimas – per didelis užduoties modelio abstrakcijos lygmenų kiekis.
+Scenarijaus sprogimui išvengti yra naudojamos trys technikos: 
+* použduotys («include» priklausomybė), 
+* plėtiniai («extend» priklausomybė), 
+* variantai.
+Jos padeda paslėpti variantus žemesnio lygmens užduotyse, taigi aukštesniame lygmenyje nagrinėjamos tik tam tikros situacijos, o kiekvieno potikslio baigtis teturi 2 variantus: sėkmę arba nesėkmę.
+
+12. Kaip susieti į vieną visumą visus su viena užduotimi susietus scenarijus? Kuo skiriasi pagrindinis ir alternatyvieji scenarijai? Kas vadinama atkuriamasis scenarijus? (4 #93–97)
+Atvaizduoti kaip kelnių klešnes – po vieną sėkmės, nesėkmės ir, galbūt, dalinės sėkmės scenarijui. Klešnėse surašyti atitinkamus scenarijus.
+Pačioje kairiausioje kelnių juostoje talpinamas pagrindinis scenarijus – kai viskas vyksta gerai ir tikslas pasiekiamas nesusiduriant su jokiomis kliūtimis. Visi kiti scenarijai vadinami alternatyviaisiais. Atkuriamieji scenarijai – (alternatyvieji) sėkmės scenarijai, kuriuose susiduriama su kliūtimis.
+
+13. Kaip įterpti užduočių modeliavimą į bendrą reikalavimų inžinerijos procesą? Kaip užduočių modeliai siejasi su funkciniais sistemos reikalavimais ir su vartotojo interfeiso reikalavimais? Kaip jie siejasi su sistemos testais? (3 #10–11)
+Užduočių modeliavimas nusako visą būsimos sistemos funkcionalumą, kaip ją mato išoriniai stebėtojai, ir yra naudojamas sistemos reikalavimams vertinti.
+Užduočių modeliai padeda suprasti, kaip vartotojai įsivaizduoja būsimos sistemos funkcinius reikalavimus, yra pagrindas vartotojo interfeisui projektuoti, bei išeities taškas būsimos sistemos testams projektuoti.
+FIXME: čia tiesiog, kas parašyta skaidrėse, bet manau atsakant galima plačiau pasamprotauti
+
+14. Paaiškinkite, kuo skiriasi užduočių modeliai verslo ir programų sistemoms. (3 #15)
+Modeliuojant verslo sistemą, sistema tapatinama su visa organizaciją, o pirminiai agentai būna klientai. Modeliuojant programų sistemą – sistema tapatinama su programų sistema, pirminiai agentai yra sistemos naudotojai

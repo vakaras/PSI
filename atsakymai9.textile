@@ -1,0 +1,220 @@
+1. Kas vadinama reikalavimu? (1 #5)
+PS reikalavimu vadinama sandoriu su užsakovu, specifikacija, standartu arba kokiu nors kitu juridinę galią turinčiu dokumentu numatyta tos sistemos savybė.
+
+2. Kas vadinama reikalavimų nustatymu? (1 #8)
+Procesas, kuriuo nustatoma, kokias paslaugas privalo teikti sistema ir kokius ribojimus ta sistema turi tenkinti teikdama tas paslaugas.
+
+3. Kokias reikalavimų rūšis jūs žinote? Jas trumpai apibūdinkite. (1 #9)
+Vartotojo reikalavimai (operaciniai poreikiai): Turi taip aprašyti reikalavimus, kad jie būtų suprantami žmonėms, tik paviršutiniškai susipažinusiems su tuo, kas yra kompiuteriai ir programų sistemos.
+Sistemos reikalavimai: Tam tikru specialiu būdu struktūrizuotas detalus sistemos teikiamų paslaugų ir jos tenkinamų ribojimų aprašas.
+Projektiniai rekalavimai: Abstraktus programų sistemos įgyvendinimo būdo aprašas, naudojamas kaip išeities ribojimai detaliai projektuojant sistemą.
+
+4. Kas ir kokiais tikslais skaito reikalavimus? (2 #10)
+Vartotojo reikalavimus: užsakovo vadovybė, sistemos vartotojai, dalykinės srities specialistai, sistemos architektas.
+Sistemos reikalavimus: sistemos vartotojai, dalykinės srities specialistai, sistemos architektas, PS inžinieriai.
+Projektinius reikalavimus: sistemos eksploatavimo tarnybos, sistemos architektas, PS inžinieriai.
+FIXME: atsakyta tik į pusę klausimo
+
+5. Kas vadinama reikalavimų formulavimu? Dėl kokių priežasčių verta formuluoti reikalavimus? (2 #11)
+Procesas, kuriuo operaciniai poreikiai yra pertvarkomi į tikslų ir išsamų aprašą, ką sistema darys ir kaip ji veiks.
+Jei pradedama dirbti nesuformulavus reikalavimų, arba jie yra nuolat kaitaliojami, yra didelė projekto žlugimo rizika.
+
+6. Kas vadinama reikalavimų specifikacija? (1 #12)
+Tai dokumentas, aprašantis ką turi daryti sistema ir kokius kitus reikalavimus ji turi tenkinti.
+
+7. Kokios yra gerai suformuluoto reikalavimo savybės? (1 #14–20)
+Abstraktus – suformuluotas vadovaujantis juodosios dėžės principu.
+Išsamus – turėti prasmę kai yra nagrinėjamas nepriklausomai nuo kitų reikalavimų.
+Tikslus – visi naudojami terminai turi turėti griežtai apibrėžtas reikšmes.
+Vienareikšmis – jo negalima interpretuoti keliais skirtingais būdais.
+Verifikuojamas – turi būti žinomas ir prieinamas procesas, kurį taikant galima nustatyti jo įgyvendinamumą.
+Įgyvendinamas – žinomas ir prieinamas visais požiūriais, inovaciniai slenksčiai gali būti pašalinti per priimtiną laikotarpį ir už priimtiną kainą ir kurį taikant galima sukurti sistemą, turinčią tuo reikalavimu specifikuojamą savybę.
+Integruojamas – sujungus su kitais reikalavimais, gaunamas suderintas rinkinys.
+Lokalizuojamas – įgyvendinamas vienu ar keliais kuriamos sistemos komponentais.
+Trasuojamas – vienareikšmiškai įvardinamas ir turi nuorodą į savo šaltinį.
+Unikalus – nedubliuoja kitų reikalavimų.
+Glaustas – nėra pagrindimo, apibrėžčių, kitų nebūtinų dalykų.
+Suprantamas – nevartojama tik specialistams suprantamų terminų.
+8. Koks reikalavimas vadinamas abstrakčiu? (1 #14)
+9. Koks reikalavimas vadinamas išsamiu? (1 #14)
+10. Koks reikalavimas vadinamas tiksliu? (1 #15)
+11. Koks reikalavimas vadinamas vienareikšmiu? (1 #16)
+12. Koks reikalavimas vadinamas verifikuojamu? (1 #17)
+13. Koks reikalavimas vadinamas įgyvendinamu? (1 #17)
+14. Koks reikalavimas vadinamas integruojamu? (1 #18)
+15. Koks reikalavimas vadinamas lokalizuojamu? (1 #18)
+16. Koks reikalavimas vadinamas trasuojamu? (1 #19)
+17. Koks reikalavimas vadinamas unikaliu? (1 #20)
+18. Koks reikalavimas vadinamas glaustu? (1 #20)
+19. Koks reikalavimas vadinamas suprantamu? (1 #20)
+
+20. Paaiškinkite funkcinių ir nefunkcinių reikalavimų skirtumus. (2 #21)
+Funkciniai nusako sistemos teikiamas paslaugas ir elgseną, nefunkciniai – projektinius sprendimus.
+
+21. Paaiškinkite sistemos pagrindinio funkcionalumo ir jos pagalbinio funkcionalumo skirtumus. (2 #25)
+Pagrindinis funkcionalumas – tas, kurio reikia operaciniams poreikiams patenkinti; pagalbinis – sistemai aptarnauti, prižiūrėti, administruoti arba su ja dirbti.
+
+22. Kaip nustatyti, kokius funkcinius reikalavimus turi tenkinti sistema? (3 #26–27)
+Jie turi būti išvedami iš operacinių poreikių, koncepciniame modelyje specifikuotų užduočių ir sistemos naudojimo scenarijaus.
+
+23. Kokią informaciją reikia pateikti, aprašant funkcinį reikalavimą? (2 #28)
+Funkcijos įeigą, išeigą, ir, jei reikia, principinį algoritmą.
+
+24. Kokia programų sistema vadinama korektiška? Kada ji praranda savo korektiškumą? (1 #30)
+Programų sistema vadinama korektiška, jei ji tenkina operacinius vartotojų poreikius ir funkcinės savybės atitinka reikalavimų specifikacija numatytus reikalavimus.
+Jei programų sistema netenkina jos funkcinių reikalavimų, ji daro ne tai, ko iš jos tikimasi ir tampa nekorektiška.
+
+25. Kokias ribojimų grupes apima nefunkciniai reikalavimai? Apibūdinkite jas trumpai. (3 #32)
+* Interfeiso – riboja sistemos ir jos aplinkos sąveikos būdus.
+* Veikimo.
+* Ekonominius.
+* Politinius.
+* Teisinius.
+FIXME: atsakyta tik į pusę klausimo
+
+26. Kokius programų sistemos aspektus riboja interfeiso ribojimai? Kas įvyksta juos pažeidus? (2 #33, #35)
+Sistemos ir jos aplinkos sąveikos būdus.
+Pažeidus šiuos reikalavimus sistema praranda sąveikos su tam tikrais savo aplinkos elementais galimybes.
+
+27. Kokias reikalavimų grupes apima interfeiso reikalavimai? (1 #33–34, #36)
+* vartotojo
+* kitų dalykinių sistemų
+* operacinės sistemos
+* duomenų bazės
+* kompiuterių tinklo
+* programavimo kalbos
+* dokumentų mainų
+
+28. Kokias reikalavimų grupes apima vartotojo interfeiso reikalavimai? (1 #37) 
+* užduočių formulavimo kalbos
+* naudojimo paprastumo
+* patogumo vartotojui
+* ergonominiai
+
+29. Kas tai yra užduočių formulavimo kalbos semantinė galia? Kokiais reikalavimais ji nusakoma? (2 #38)
+Formulavimo kalba turi būti nei pernelyg bendra, nei pernelyg konkreti.
+
+30. Nuo ko priklauso užduočių formulavimo kalbos procedūriškumo laipsnis? Kokiais reikalavimais jis nusakomas? (4 #39)
+Nuo pasirinktos formulavimo kalbos paradigmos.
+FIXME
+
+31. Kas tai yra užduočių formulavimo kalbos dalykinė orientacija? Kas vadinama metafora? (4 #44–48)
+Vartotojo interfeiso formulavimas jam įprastais, patogiais terminais.
+Metafora – dalykinės srities terminas, pritaikomas programų sistemoje.
+
+32. Kas tai yra užduočių formulavimo kalbos selektyvinė geba? Kokiais reikalavimais ji nusakoma? (2 #50)
+Tikslumas, kuriuo galima filtruoti įvesties ir išvesties duomenis ir užduoties rezultatus.
+
+33. Kas tai yra užduočių formulavimo kalbos raiškos geba (išsamumas)? (2 #51)
+Galimybė ta kalba specifikuoti visus užduoties aspektus.
+
+34. Ką apibūdina užduočių formulavimo kalbos sintaksiniai reikalavimai? (2 #52)
+Kalbos projektavimo būdą, pavyzdžiui: tekstinė, meniu, formų, grafinė, piktogramų, hiperteksto ir k.t. kalbos.
+
+35. Kas tai yra užduoties pateikties protokolas? (2 #53)
+Protokolas, numatantis taisykles, kaip užduoties aprašas turi būti pateikiamas.
+
+36. Apibūdinkite programų sistemos naudojimo paprastumo reikalavimus. (3 #54) 
+* Vidinė darna: komandų formato standartas, klavišų naudojimo nepriklausomybė nuo konteksto, pranešimuose vartojamų terminų darna, manipuliavimo ekranu operacijų standartas ir t.t..
+* Išorinė darna:  atitikimas išoriniams standartams (pvz., GUI standartams).
+* Akivaizdumas: interfeisas suprojektuotas metaforos terminais.
+* Informatyvumas: informuoja apie padarytų klaidų pobūdį, aiškina, kaip elgtis ir pan. 
+* Prasmingumas: visi sistemos pranešimai yra glausti, informatyvūs ir formuluojami metaforos terminais.
+
+37. Apibūdinkite programų sistemos patogumo vartotojui reikalavimus. (2 #55) 
+* Informavimo priemonių tinkamumas (helpfulness): ką reikia įtraukti į informavimo (help) failus ir kaip tie failai turi būti organizuoti.
+Patrauklumas: spalvos ir kiti dizaino ypatumai.
+Individualizavimas: kaip vartotojas gali individualizuoti (prisitaikyti savo pomėgiams) interfeisą.
+
+38. Apibūdinkite programų sistemos ergonominius reikalavimus. (1 #55)
+Kaip atsižvelgti į potencialių vartotojų psichofiziologines charakteristikas (pvz., aklus vartotojus).
+
+39. Kokius programų sistemos aspektus riboja veikimo ribojimai? Kas atsitinka juos pažeidus? (2 #56–57)
+Tikslumą, patikimumą, gyvybingumą, robastiškumą ir našumą.
+Pažeidus prarandama sistemos operacinė kokybė.
+
+40. Kokias reikalavimų grupes apima veikimo ribojimai? (1 #56)
+* tikslumo
+* patikimumo
+* gyvybingumo
+* robastiškumo
+* našumo
+
+41. Apibūdinkite, kas tai yra programų sistemos tikslumo reikalavimai. (2 #58–62))
+Reikalavimai duomenų saugojimo, vaizdavimo, skaičiavimų tikslumui (nustato leidžiamas paklaidas), atitikimui verslo taisyklėms.
+
+42. Apibūdinkite, kas tai yra programų sistemos patikimumo reikalavimai. (2 #63)
+Reikalavimai maksimaliam trykių dažniui ir rimtumui.
+
+43. Apibūdinkite, kas tai yra programų sistemos gyvybingumo reikalavimai. (1 #64)
+Reikalavimai kritinių funkcijų apsaugai nuo trykių.
+
+44. Apibūdinkite, kas tai yra programų sistemos robastiškumo reikalavimai. (1 #65–66)
+Reikalavimai gebėjimui automatiškai atkurti sistemos darbą įvykus trykiui, atsparumui prieš neteisingą sistemos naudojimą.
+
+45. Apibūdinkite, kas tai yra programų sistemos našumo reikalavimai. (4 #67)
+Reikalavimai sistemos veikimo greičiui ir resursų naudojimui.
+* reakcijos laikas
+* pralaidumas (įvykių apdorojimas per laiko tarpą)
+* gaišties laikas (įvykio apdorojimo trukmė)
+* produktyvumas (resursų sąnaudos)
+* masto keitimas (resursų sąnaudų pokytis norint didinant apkrovą išlaikyti tą patį pralaidumą ir gaišties laiką)
+
+46. Kokius programų sistemos aspektus riboja ekonominiai ribojimai? Kas atsitinka juos pažeidus? (2 #72)
+Kūrimo ir eksploatacijos kainą. Pažeidus prarandami pinigai.
+
+47. Kokios reikalavimų grupės išplaukia iš ekonominių ribojimų? (1 #73)
+* diegiamumo
+* aptarnaujamumo
+* prižiūrimumo
+* tiražuojamumo
+
+48. Apibūdinkite, kas tai yra programų sistemos diegimo reikalavimai. (4 #74–78)
+* Instaliuojamumas – ruošinio patikimumas, instaliavimo trukmė, procedūros, parametrizavimas, etc.
+* Įsisavinamumas – tikimybė, kad per tam tikrą laiko tarpą atitinkamą išsilavinimą turintis asmuo sugebės išmokti dirbti su sistema ar ją administruoti.
+* Pastangos duomenų bazėms sukurti – funkcijos pradinių duomenų sukūrimui.
+
+49. Apibūdinkite, kas tai yra programų sistemos aptarnaujamumo reikalavimai. (2 #79) 
+Vartotojų pastangos, kurių prireikia naudojant sistemą savo užduotims vykdyti.
+
+50. Apibūdinkite, kas tai yra programų sistemos prižiūrimumo reikalavimai. (3 #80–81) 
+Reikalavimai sistemos darnos palaikymui ir jos perdarymų išlaidoms.
+* Taisomumas – pastangų poreikis klaidoms ištaisyti
+* Keičiamumas – ...
+* Plečiamumas – ...
+* Perkeliamumas – ...
+* Komponuojamumas – ...
+* Testuojamumas – pastangų poreikis testams sukurti
+
+51. Apibūdinkite, kas tai yra programų sistemos tiražuojamumo reikalavimai. (1 #82)
+Reikalavimai, nurodantys, kaip ir kokie komponentai turi būti tiražuojami.
+
+52. Kokius programų sistemos aspektus riboja politiniai ribojimai? Kas atsitinka juos pažeidus? (2 #83)
+Verslo paslapčių apsaugą. Pažeidus, pažeidžiama organizacijos verslo politika.
+
+53. Apibūdinkite, kas tai yra programų sistemos apsaugos reikalavimai? (3 #83–84)
+Reikalavimai, apibrėžiantys, kokiu mastu sistema turi būti apsaugota nuo galimybių ja pasinaudoti neteisėtai.
+
+54. Kokius programų sistemos aspektus riboja teisiniai ribojimai? (1 #85)
+Teisiniai ribojimai reglamentuoja, kas leidžiama ir kas neleidžiama daryti kuriamoje PS, atsižvelgiant į  galiojančius teisės aktus (asmens duomenų apsauga, statistinių duomenų apdorojimas ir pateiktis, garbinga konkurencija, teisinis konkrečios dalykinės srities reguliavimas ir kt.).
+
+55. Ką reglamentuoja ISO 9126 standartas? Kaip jis susijęs su reikalavimų formulavimu ir jų įgyvendinimo vertinimu? (4 #86–141)
+Pateikia reikalavimų kokybės atributus.
+TODO
+
+56. Kokie reikalavimai vadinami anotuotais? (2 #142–146)
+Tie, kuriems apibrėžtas tam tikras svarbos (esminis/pageidavimas/papildomas), galiojimo laiko (pastovus/sąlyginai pastovus/laikinas), kritiškumo (sunkios/apysunkės/lengvos pasėkmės) statusas.
+
+57. Kas tai yra reikalavimų specifikacija? Kokios yra gerai parašytos reikalavimų specifikacijos savybės? Apibūdinkite jas trumpai. (5 #147–)
+Reikalavimų specifikacija – tai oficialus, juridinę galią turintis dokumentas, nustatantis, kokį produktą privalo sukurti vykdytojas.
+Gerai parašyta reikalavimų specifikacija
+* tenkina projektuotojų poreikius (patogi skaitymui ir keitimui);
+* yra konceptuali (reikalavimai abstraktūs);
+* yra koncepciškai skaidri (paprasta, aiški ir suprantama);
+* yra konkreti (gali būti patikrinamas visų reikalavimų įgyvendinamumas);
+* yra gerai struktūrizuota (griežtai išlaikytas turinių atskyrimo principas);
+* yra tiksli (visi reikalavimai tikslūs);
+* yra išsami (išsamiai aprašytas visas reikalingas sistemos funkcionalumas);
+* yra vienareikšmiška;
+* yra trasuojama (reikalavimai lokalizuojami ir lengvai susiejami);
+* yra darni (nėra prieštaravimų tarp reikalavimų).
